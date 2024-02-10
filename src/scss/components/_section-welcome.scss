@@ -3,8 +3,10 @@
 	background: var(--brown-background);
 
 	.container {
+		padding-top: 90px;
 		@include desktop {
 			padding-inline: 100px;
+			padding-top: 60px;
 		}
 
 		@include bigMobile {
@@ -14,11 +16,9 @@
 
 	&__inner {
 		display: flex;
-		padding-top: 90px;
 
 		@include desktop {
 			flex-direction: column;
-			padding-top: 60px;
 		}
 	}
 

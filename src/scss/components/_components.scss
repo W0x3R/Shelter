@@ -41,6 +41,20 @@ body {
 	}
 }
 
+.title {
+	font-family: Georgia;
+	@include fluid-text(25, 768, 35);
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: 1.6px;
+	text-align: left;
+	color: var(--dark__84);
+
+	@include bigMobile {
+		text-align: center;
+	}
+}
+
 .subtitle {
 	font-family: 'Arial', 'sans-serif';
 	font-size: 15px;
@@ -48,4 +62,8 @@ body {
 	line-height: 160%;
 	letter-spacing: 0px;
 	text-align: left;
+
+	@include bigMobile {
+		text-align: justify;
+	}
 }
