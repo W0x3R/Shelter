@@ -27,3 +27,11 @@ $small-mobile: 380px;
 		}
 	}
 }
+
+@mixin hover-none {
+	@media (hover: none) {
+		&:active {
+			@content;
+		}
+	}
+}

@@ -1,5 +1,6 @@
 :root {
-	--brown-background: radial-gradient(234.05% 111.8% at 0% 0%, rgb(91, 72, 58), rgb(38, 36, 37) 100%) rgb(33, 31, 32);
+	--brown-background: url(../images/noise_transparent.png),
+		linear-gradient(to right, rgb(79, 60, 49) 0%, rgb(61, 52, 46) 27%, rgb(33, 31, 32) 100%);
 	--white_255: rgb(255, 255, 255);
 	--white_246: rgb(246, 246, 246);
 	--orange: rgb(241, 205, 179);
@@ -9,7 +10,7 @@
 	--dark__84: rgb(84, 84, 84);
 	--dark__205: rgb(205, 205, 205);
 	--nav__active-color: rgb(241, 205, 179);
-	--nav__active-border: 3px solid var(var(--nav__active-color));
+	--nav__active-border: 3px solid var(--nav__active-color);
 
 	--buttons-borderRadius: 100px;
 	--buttons-padding: 15px 45px 15px 45px;
