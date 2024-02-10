@@ -61,6 +61,7 @@
 	&__item {
 		cursor: pointer;
 		transition: var(--transition);
+		border-bottom: 3px solid transparent;
 
 		@include hover {
 			color: var(--white_255);
