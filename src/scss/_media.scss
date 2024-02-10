@@ -1,4 +1,4 @@
-$desktop: 1240;
+$desktop: 1200px;
 $big-mobile: 767px;
 $small-mobile: 380px;
 
@@ -23,11 +23,6 @@ $small-mobile: 380px;
 @mixin hover {
 	@media (hover: hover) {
 		&:hover {
-			@content;
-		}
-	}
-	@media (hover: none) {
-		&:active {
 			@content;
 		}
 	}

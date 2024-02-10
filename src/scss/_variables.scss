@@ -8,7 +8,8 @@
 	--dark__76: rgb(76, 76, 76);
 	--dark__84: rgb(84, 84, 84);
 	--dark__205: rgb(205, 205, 205);
-	--nav__active: 3px solid rgb(241, 205, 179);
+	--nav__active-color: rgb(241, 205, 179);
+	--nav__active-border: 3px solid var(var(--nav__active-color));
 
 	--buttons-borderRadius: 100px;
 	--buttons-padding: 15px 45px 15px 45px;
