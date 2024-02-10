@@ -2,7 +2,4 @@
 @import 'variables';
 @import 'mixins';
 @import 'media';
-
-h1 {
-	@include fluid-text(13, 46);
-}
+@import './components/_components';
