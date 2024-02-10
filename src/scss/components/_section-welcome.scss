@@ -4,6 +4,7 @@
 
 	.container {
 		padding-top: 90px;
+
 		@include desktop {
 			padding-inline: 100px;
 			padding-top: 60px;
@@ -38,11 +39,11 @@
 	}
 
 	&__info-title {
+		margin-bottom: 42px;
 		@include fluid-text(25, 768, 44);
 		color: var(--white_255);
 		line-height: 130%;
 		letter-spacing: 0;
-		margin-bottom: 42px;
 		font-weight: 400;
 
 		@include bigMobile {
@@ -51,8 +52,8 @@
 	}
 
 	&__info-subtitle {
-		color: var(--dark__205);
 		margin-bottom: 42px;
+		color: var(--dark__205);
 
 		@include bigMobile {
 			text-align: center;
