@@ -52,11 +52,6 @@
 
 	&__info-subtitle {
 		color: var(--dark__205);
-		font-family: Arial;
-		font-size: 15px;
-		line-height: 160%;
-		letter-spacing: 0;
-		text-align: left;
 		margin-bottom: 42px;
 
 		@include bigMobile {
