@@ -1,0 +1,74 @@
+.header {
+	background: var(--white_255);
+
+	.container {
+		padding-block: 30px;
+
+		@include desktop {
+			padding-inline: 30px;
+		}
+
+		@include bigMobile {
+			padding-inline: 20px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.logo {
+	&__title {
+		margin-bottom: 10px;
+		font-size: 32px;
+		line-height: 110%;
+		letter-spacing: 2px;
+		color: var(--dark__84);
+	}
+
+	&__subtitle {
+		color: var(--dark__buttons);
+		font-size: 13px;
+		line-height: 15px;
+		letter-spacing: 1.5px;
+	}
+}
+.nav {
+	color: var(--dark__84);
+
+	&__list {
+		display: flex;
+
+		@include bigMobile {
+			position: absolute;
+			left: 0;
+			top: 0;
+			flex-direction: column;
+			align-items: center;
+			@include sizes(100vw, 100vh);
+			transform: translateY(-200%);
+			transition: transform 0.5s ease-in-out;
+		}
+	}
+
+	&__item {
+		border-bottom: 3px solid transparent;
+		cursor: pointer;
+		transition: var(--transition);
+
+		@include hover {
+			color: var(--dark__buttons);
+		}
+
+		&:active {
+			border-bottom: var(--nav__active-border);
+		}
+
+		&:not(:last-of-type) {
+			margin-right: 35px;
+		}
+	}
+}
