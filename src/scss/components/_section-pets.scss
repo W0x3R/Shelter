@@ -1,0 +1,185 @@
+.pets {
+	background: var(--white_246);
+
+	.container {
+		padding-block: 75px 100px;
+
+		@include desktop {
+			padding: 80px 30px 100px;
+		}
+
+		@include bigMobile {
+			padding: 36px 10px 42px;
+		}
+	}
+
+	&__images-arrow {
+		position: absolute;
+		padding: 0;
+		@include sizes(52px, 52px);
+		border: 2px solid rgb(241, 205, 179);
+		border-radius: var(--buttons-borderRadius);
+		background: transparent;
+		cursor: pointer;
+		transition: var(--transition);
+
+		&:first-of-type {
+			left: 41px;
+
+			@include desktop {
+				left: 29px;
+			}
+
+			@include bigMobile {
+				left: 44px;
+				bottom: -70px;
+			}
+		}
+
+		&:last-of-type {
+			right: 41px;
+
+			@include desktop {
+				right: 29px;
+			}
+
+			@include bigMobile {
+				right: 44px;
+				bottom: -70px;
+			}
+		}
+
+		@include hover {
+			background: var(--orange_hover);
+		}
+
+		@include hover-none {
+			background: var(--orange_hover);
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		max-width: 400px;
+		text-align: center;
+		letter-spacing: 6%;
+
+		@include desktop {
+			margin-bottom: 54px;
+		}
+
+		@include bigMobile {
+			margin-bottom: 42px;
+			max-width: 300px;
+		}
+	}
+
+	&__images {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+		gap: 0 90px;
+		align-self: center;
+		margin-bottom: 60px;
+		max-width: 1200px;
+
+		@include desktop {
+			gap: 0 40px;
+			max-width: 708px;
+		}
+
+		@include bigMobile {
+			position: relative;
+			margin-bottom: 116px;
+		}
+	}
+
+	&__images-figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 9px;
+		background: var(--white_250);
+		cursor: pointer;
+		transition: var(--transition);
+
+		&:not(:nth-of-type(-n + 3)) {
+			display: none;
+		}
+
+		@include desktop {
+			&:not(:nth-of-type(-n + 2)) {
+				display: none;
+			}
+		}
+
+		@include bigMobile {
+			&:not(:nth-of-type(-n + 1)) {
+				display: none;
+			}
+		}
+
+		@include hover {
+			background: var(--white_255);
+
+			& figcaption button {
+				background: var(--orange_hover);
+			}
+		}
+
+		&:hover figcaption button {
+			background: var(--orange_hover);
+		}
+	}
+
+	&__images-picture {
+	}
+
+	&__images-image {
+		margin-bottom: 23px;
+	}
+
+	&__images-text {
+		margin-bottom: 28px;
+		text-align: center;
+	}
+
+	&__images-button {
+		margin-bottom: 30px;
+		padding: var(--buttons-padding);
+		color: var(--dark__buttons);
+		border: 2px solid rgb(241, 205, 179);
+		border-radius: var(--buttons-borderRadius);
+		background: transparent;
+		font-size: 17px;
+		line-height: 130%;
+		letter-spacing: 1px;
+		cursor: pointer;
+		transition: var(--transition);
+	}
+
+	&__link {
+		padding: var(--buttons-padding);
+		color: var(--dark__buttons);
+		background: var(--nav__active-color);
+		border-radius: var(--buttons-borderRadius);
+		font-size: 17px;
+		line-height: 130%;
+		letter-spacing: 1px;
+		transition: var(--transition);
+
+		@include hover {
+			background: var(--orange_hover);
+		}
+
+		@include hover-none {
+			background: var(--orange_hover);
+		}
+	}
+}
