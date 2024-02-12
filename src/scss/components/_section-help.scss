@@ -1,0 +1,84 @@
+.help {
+	background: var(--white_255);
+
+	.container {
+		padding-block: 80px 100px;
+
+		@include desktop {
+			padding-inline: 40px;
+		}
+
+		@include bigMobile {
+			padding-block: 42px;
+			padding-inline: 15px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-inline: 87px;
+
+		@include desktop {
+			padding-inline: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 58px;
+		max-width: 308px;
+		text-align: center;
+
+		@include bigMobile {
+			margin-bottom: 37px;
+			max-width: 220px;
+		}
+	}
+
+	&__icons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-self: stretch;
+		gap: 53px 121px;
+
+		@include desktop {
+			gap: 57px 0;
+		}
+
+		@include bigMobile {
+			gap: 24px 0;
+			justify-content: flex-start;
+		}
+	}
+
+	&__icons-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@include desktop {
+			width: 33.3%;
+		}
+
+		@include bigMobile {
+			width: 50%;
+		}
+	}
+
+	&__icons-svg {
+		@include sizes(60px, 60px);
+		margin-bottom: 30px;
+
+		@include bigMobile {
+			@include sizes(50px, 50px);
+			margin-bottom: 20px;
+		}
+	}
+
+	&__icons-text {
+		@include fluid-text(15, 767, 20);
+	}
+}
