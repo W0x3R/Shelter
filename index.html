@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="body">
 	<header class="header">
 		<div class="container">
 			<div class="header__inner">
@@ -34,8 +34,8 @@
 					<ul class="nav__list">
 						<li class="nav__item subtitle">About the shelter</li>
 						<li class="nav__item subtitle"><a href="./our-pets.html">Our pets</a></li>
-						<li class="nav__item subtitle">Help the shelter</li>
-						<li class="nav__item subtitle">Contacts</li>
+						<li class="nav__item subtitle"><a href="#help">Help the shelter</a></li>
+						<li class="nav__item subtitle"><a href="#footer">Contacts</a></li>
 					</ul>
 				</nav>
 				<div class="burger">
@@ -55,7 +55,7 @@
 						<p class="welcome__info-subtitle subtitle">We offer to give a chance to a little and nice puppy with an
 							extremely
 							wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-						<a href="" class="welcome__info-link">Make a friend</a>
+						<a href="#pets" class="welcome__info-link">Make a friend</a>
 					</div>
 					<picture class="welcome__picture">
 						<source
@@ -97,13 +97,12 @@
 				</div>
 			</div>
 		</section>
-		<section class="pets">
+		<section class="pets" id="pets">
 			<div class="container">
 				<div class="pets__inner">
 					<h2 class="pets__title title">Our friends who
 						are looking for a house</h2>
 					<div class="pets__images">
-						<button class="pets__images-arrow">←</button>
 						<figure class="pets__images-figure">
 							<picture class="pets__images-picture">
 								<source
@@ -232,13 +231,18 @@
 								<button class="pets__images-button">Learn more</button>
 							</figcaption>
 						</figure>
-						<button class="pets__images-arrow">→</button>
+
 					</div>
-					<a href="" class="pets__link">Get to know the rest</a>
+					<div class="pets__buttons">
+						<button class="pets__buttons-item">←</button>
+						<button class="pets__buttons-item">→</button>
+					</div>
+
+					<a href="./our-pets.html" class="pets__link">Get to know the rest</a>
 				</div>
 			</div>
 		</section>
-		<section class="help">
+		<section class="help" id="help">
 			<div class="container">
 				<div class="help__inner">
 					<h3 class="help__title title">How you can help
@@ -335,7 +339,7 @@
 			</div>
 		</section>
 	</main>
-	<footer class="footer">
+	<footer class="footer" id="footer">
 		<div class="container">
 			<div class="footer__inner">
 				<div class="footer__contacts">

@@ -43,14 +43,23 @@
 		display: flex;
 
 		@include bigMobile {
-			position: absolute;
-			left: 0;
+			position: fixed;
+			right: 0;
 			top: 0;
 			flex-direction: column;
+			justify-content: center;
 			align-items: center;
-			@include sizes(100vw, 100vh);
-			transform: translateY(-200%);
+			padding-block: 248px;
+			@include sizes(320px, 100vh);
+			background: var(--white_255);
+			z-index: 1;
+			transform: translateX(200%);
 			transition: transform 0.5s ease-in-out;
+		}
+
+		&_active {
+			transform: translateX(0);
+			box-shadow: 0 0 0 9999px rgb(0 0 0 / 60%);
 		}
 	}
 
@@ -67,8 +76,57 @@
 			border-bottom: var(--nav__active-border);
 		}
 
+		&:nth-of-type(2) {
+			border-bottom: var(--nav__active-border);
+		}
+
 		&:not(:last-of-type) {
 			margin-right: 35px;
 		}
+
+		@include bigMobile {
+			font-size: 32px;
+
+			&:not(:last-of-type) {
+				margin-bottom: 43px;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.burger {
+	display: none;
+	position: relative;
+	z-index: 2;
+	@include sizes(30px, 22px);
+	cursor: pointer;
+	transition: var(--transition);
+
+	@include bigMobile {
+		display: block;
+	}
+
+	&__line {
+		position: absolute;
+		display: inline-block;
+		width: 30px;
+		border-bottom: 2px solid #000;
+
+		&:nth-of-type(1) {
+			top: 0px;
+		}
+
+		&:nth-of-type(2) {
+			top: 10px;
+		}
+
+		&:nth-of-type(3) {
+			top: 20px;
+		}
+	}
+
+	&_active {
+		transform: rotate(90deg);
 	}
 }

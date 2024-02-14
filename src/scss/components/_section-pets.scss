@@ -13,51 +13,6 @@
 		}
 	}
 
-	&__images-arrow {
-		position: absolute;
-		padding: 0;
-		@include sizes(52px, 52px);
-		border: 2px solid rgb(241, 205, 179);
-		border-radius: var(--buttons-borderRadius);
-		background: transparent;
-		cursor: pointer;
-		transition: var(--transition);
-
-		&:first-of-type {
-			left: 41px;
-
-			@include desktop {
-				left: 29px;
-			}
-
-			@include bigMobile {
-				left: 44px;
-				bottom: -70px;
-			}
-		}
-
-		&:last-of-type {
-			right: 41px;
-
-			@include desktop {
-				right: 29px;
-			}
-
-			@include bigMobile {
-				right: 44px;
-				bottom: -70px;
-			}
-		}
-
-		@include hover {
-			background: var(--orange_hover);
-		}
-
-		@include hover-none {
-			background: var(--orange_hover);
-		}
-	}
-
 	&__inner {
 		display: flex;
 		flex-direction: column;
@@ -87,7 +42,8 @@
 		gap: 0 90px;
 		align-self: center;
 		margin-bottom: 60px;
-		max-width: 1200px;
+		max-width: 990px;
+		overflow: hidden;
 
 		@include desktop {
 			gap: 0 40px;
@@ -108,22 +64,6 @@
 		background: var(--white_250);
 		cursor: pointer;
 		transition: var(--transition);
-
-		&:not(:nth-of-type(-n + 3)) {
-			display: none;
-		}
-
-		@include desktop {
-			&:not(:nth-of-type(-n + 2)) {
-				display: none;
-			}
-		}
-
-		@include bigMobile {
-			&:not(:nth-of-type(-n + 1)) {
-				display: none;
-			}
-		}
 
 		@include hover {
 			background: var(--white_255);
@@ -162,6 +102,53 @@
 		letter-spacing: 1px;
 		cursor: pointer;
 		transition: var(--transition);
+	}
+
+	&__buttons {
+		&-item {
+			position: absolute;
+			padding: 0;
+			@include sizes(52px, 52px);
+			border: 2px solid rgb(241, 205, 179);
+			border-radius: var(--buttons-borderRadius);
+			background: transparent;
+			cursor: pointer;
+			transition: var(--transition);
+
+			&:first-of-type {
+				left: 41px;
+
+				@include desktop {
+					left: 29px;
+				}
+
+				@include bigMobile {
+					left: 44px;
+					bottom: -70px;
+				}
+			}
+
+			&:last-of-type {
+				right: 41px;
+
+				@include desktop {
+					right: 29px;
+				}
+
+				@include bigMobile {
+					right: 44px;
+					bottom: -70px;
+				}
+			}
+
+			@include hover {
+				background: var(--orange_hover);
+			}
+
+			@include hover-none {
+				background: var(--orange_hover);
+			}
+		}
 	}
 
 	&__link {
