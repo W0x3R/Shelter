@@ -32,5 +32,49 @@ function checkClickOutBurger(e) {
 body.addEventListener('click', function (e) {
   checkClickOutBurger(e);
 });
+var slider = document.querySelector('.pets__images');
+var buttonLeft = document.querySelector('.left');
+var buttonRight = document.querySelector('.right');
+var isAnimateFinished = false;
+buttonLeft.addEventListener('click', moveLeft);
+buttonRight.addEventListener('click', moveRight);
+function controlAnimation(arr, action, animationClass) {
+  arr.map(function (e) {
+    e.classList[action](animationClass);
+  });
+}
+function moveLeft() {
+  if (isAnimateFinished) return;
+  isAnimateFinished = true;
+  var sliderChildren = slider.children;
+  var sliderChildrenArr = Array.from(sliderChildren);
+  var firstSlide = sliderChildren[0];
+  var savedSlide = firstSlide.cloneNode(true);
+  controlAnimation(sliderChildrenArr, 'add', 'pets__arrow_moveLeftAnimation');
+  setTimeout(function () {
+    slider.removeChild(firstSlide);
+    controlAnimation(sliderChildrenArr, 'remove', 'pets__arrow_moveLeftAnimation');
+  }, 510);
+  setTimeout(function () {
+    slider.appendChild(savedSlide);
+    isAnimateFinished = false;
+  }, 610);
+}
+function moveRight() {
+  if (isAnimateFinished) return;
+  isAnimateFinished = true;
+  var sliderChildren = slider.children;
+  var sliderChildrenArr = Array.from(sliderChildren);
+  var lastSlide = sliderChildren[sliderChildren.length - 1];
+  var savedSlide = lastSlide.cloneNode(true);
+  slider.prepend(savedSlide);
+  slider.removeChild(lastSlide);
+  sliderChildrenArr = Array.from(sliderChildren);
+  controlAnimation(sliderChildrenArr, 'add', 'pets__arrow_moveRightAnimation');
+  setTimeout(function () {
+    controlAnimation(sliderChildrenArr, 'remove', 'pets__arrow_moveRightAnimation');
+    isAnimateFinished = false;
+  }, 610);
+}
 /******/ })()
 ;

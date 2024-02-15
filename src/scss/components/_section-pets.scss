@@ -13,10 +13,82 @@
 		}
 	}
 
+	&__arrow {
+		position: absolute;
+		padding: 0;
+		@include sizes(52px, 52px);
+		border: 2px solid rgb(241, 205, 179);
+		border-radius: var(--buttons-borderRadius);
+		background: transparent;
+		cursor: pointer;
+		transition: var(--transition);
+
+		&:first-of-type {
+			left: 0;
+			top: 49%;
+
+			@include desktop {
+				left: 0;
+			}
+
+			@include bigMobile {
+				left: 19%;
+				top: 79%;
+			}
+		}
+
+		&:last-of-type {
+			right: 0;
+			top: 49%;
+
+			@include desktop {
+				right: 0;
+			}
+
+			@include bigMobile {
+				right: 19%;
+				top: 79%;
+			}
+		}
+
+		@include hover {
+			background: var(--orange_hover);
+		}
+
+		@include hover-none {
+			background: var(--orange_hover);
+		}
+
+		&_moveLeftAnimation {
+			animation: moveLeftAnimation1280 0.5s ease forwards;
+
+			@include desktop {
+				animation: moveLeftAnimation768 0.5s ease forwards;
+			}
+
+			@include bigMobile {
+				animation: moveLeftAnimation320 0.5s ease forwards;
+			}
+		}
+
+		&_moveRightAnimation {
+			animation: moveRightAnimation1280 0.5s ease forwards;
+
+			@include desktop {
+				animation: moveRightAnimation768 0.5s ease forwards;
+			}
+
+			@include bigMobile {
+				animation: moveRightAnimation320 0.5s ease forwards;
+			}
+		}
+	}
+
 	&__inner {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
 	}
 
 	&__title {
@@ -47,12 +119,13 @@
 
 		@include desktop {
 			gap: 0 40px;
-			max-width: 708px;
+			max-width: 580px;
 		}
 
 		@include bigMobile {
 			position: relative;
 			margin-bottom: 116px;
+			max-width: 270px;
 		}
 	}
 
@@ -104,53 +177,6 @@
 		transition: var(--transition);
 	}
 
-	&__buttons {
-		&-item {
-			position: absolute;
-			padding: 0;
-			@include sizes(52px, 52px);
-			border: 2px solid rgb(241, 205, 179);
-			border-radius: var(--buttons-borderRadius);
-			background: transparent;
-			cursor: pointer;
-			transition: var(--transition);
-
-			&:first-of-type {
-				left: 41px;
-
-				@include desktop {
-					left: 29px;
-				}
-
-				@include bigMobile {
-					left: 44px;
-					bottom: -70px;
-				}
-			}
-
-			&:last-of-type {
-				right: 41px;
-
-				@include desktop {
-					right: 29px;
-				}
-
-				@include bigMobile {
-					right: 44px;
-					bottom: -70px;
-				}
-			}
-
-			@include hover {
-				background: var(--orange_hover);
-			}
-
-			@include hover-none {
-				background: var(--orange_hover);
-			}
-		}
-	}
-
 	&__link {
 		padding: var(--buttons-padding);
 		color: var(--dark__buttons);
@@ -168,5 +194,59 @@
 		@include hover-none {
 			background: var(--orange_hover);
 		}
+	}
+}
+
+@keyframes moveLeftAnimation1280 {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-360px);
+	}
+}
+
+@keyframes moveLeftAnimation768 {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-310px);
+	}
+}
+
+@keyframes moveLeftAnimation320 {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-310px);
+	}
+}
+
+@keyframes moveRightAnimation1280 {
+	from {
+		transform: translateX(-360px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveRightAnimation768 {
+	from {
+		transform: translateX(-310px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveRightAnimation320 {
+	from {
+		transform: translateX(-310px);
+	}
+	to {
+		transform: translateX(0);
 	}
 }
