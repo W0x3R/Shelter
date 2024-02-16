@@ -99,4 +99,23 @@
 		cursor: pointer;
 		transition: var(--transition);
 	}
+
+	&__link {
+		padding: var(--buttons-padding);
+		color: var(--dark__buttons);
+		background: var(--nav__active-color);
+		border-radius: var(--buttons-borderRadius);
+		font-size: 17px;
+		line-height: 130%;
+		letter-spacing: 1px;
+		transition: var(--transition);
+
+		@include hover {
+			background: var(--orange_hover);
+		}
+
+		@include hover-none {
+			background: var(--orange_hover);
+		}
+	}
 }

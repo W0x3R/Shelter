@@ -1,10 +1,10 @@
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 const header = document.querySelector('.header')
 const navList = document.querySelector('.nav__list')
@@ -40,7 +40,6 @@ header.addEventListener('click', function (e) {
 /* 2 */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setClassesStatePopup: function() { return /* binding */ setClassesStatePopup; }
@@ -92,7 +91,6 @@ slider.addEventListener('click', function (e) {
 /* 3 */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 function generatePopUp(name, type, breed, description, age, inoculations, diseases, parasites) {
 	return `
@@ -137,7 +135,6 @@ function generatePopUp(name, type, breed, description, age, inoculations, diseas
 /* 4 */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   petInfo: function() { return /* binding */ petInfoJSON; }
@@ -282,72 +279,8 @@ const petInfoJSON = [
 
 /***/ }),
 /* 5 */
-/***/ (function() {
-
-const slider = document.querySelector('.pets__images');
-const buttonLeft = document.querySelector('.left')
-const buttonRight = document.querySelector('.right')
-let isAnimateFinished = false;
-
-buttonLeft.addEventListener('click', moveLeft)
-buttonRight.addEventListener('click', moveRight)
-
-function controlAnimation(arr, action, animationClass) {
-	arr.map(e => {
-		e.classList[action](animationClass)
-	});
-}
-
-function moveLeft() {
-	if (isAnimateFinished) return
-	isAnimateFinished = true
-
-	const sliderChildren = slider.children
-	const sliderChildrenArr = Array.from(sliderChildren)
-	const firstSlide = sliderChildren[0]
-	const savedSlide = firstSlide.cloneNode(true)
-
-	controlAnimation(sliderChildrenArr, 'add', 'pets__arrow_moveLeftAnimation')
-
-	setTimeout(() => {
-		slider.removeChild(firstSlide)
-		controlAnimation(sliderChildrenArr, 'remove', 'pets__arrow_moveLeftAnimation')
-	}, 510)
-
-	setTimeout(() => {
-		slider.appendChild(savedSlide)
-		isAnimateFinished = false
-	}, 610);
-
-}
-
-function moveRight() {
-	if (isAnimateFinished) return
-	isAnimateFinished = true;
-
-	const sliderChildren = slider.children
-	let sliderChildrenArr = Array.from(sliderChildren)
-
-	const lastSlide = sliderChildren[sliderChildren.length - 1]
-	const savedSlide = lastSlide.cloneNode(true)
-
-
-	slider.prepend(savedSlide)
-	slider.removeChild(lastSlide)
-	sliderChildrenArr = Array.from(sliderChildren)
-	controlAnimation(sliderChildrenArr, 'add', 'pets__arrow_moveRightAnimation')
-
-	setTimeout(() => {
-		controlAnimation(sliderChildrenArr, 'remove', 'pets__arrow_moveRightAnimation')
-		isAnimateFinished = false;
-	}, 610);
-}
-
-/***/ }),
-/* 6 */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
@@ -403,18 +336,6 @@ body.addEventListener('click', function (e) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
@@ -445,16 +366,12 @@ body.addEventListener('click', function (e) {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _components_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_slider__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_checkClickOut__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
-
+/* harmony import */ var _components_checkClickOut__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 
 
 
