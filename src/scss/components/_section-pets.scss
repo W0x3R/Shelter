@@ -82,6 +82,14 @@
 				animation: moveRightAnimation320 0.5s ease forwards;
 			}
 		}
+
+		&-svg {
+			width: 14px;
+			height: 6px;
+			position: absolute;
+			top: calc(50% - 3px);
+			left: calc(50% - 7px);
+		}
 	}
 
 	&__inner {
