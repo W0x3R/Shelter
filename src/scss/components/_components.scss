@@ -5,6 +5,7 @@
 	&_fixed {
 		overflow: hidden;
 	}
+
 	&_popup_fixed {
 		overflow: hidden;
 	}
@@ -18,7 +19,6 @@
 }
 
 .title {
-	font-family: Georgia;
 	@include fluid-text(25, 768, 35);
 	font-weight: 400;
 	line-height: 130%;
@@ -34,7 +34,6 @@
 .subtitle {
 	font-family: 'Arial', 'sans-serif';
 	font-size: 15px;
-	font-weight: 400;
 	line-height: 160%;
 	letter-spacing: 0px;
 	text-align: left;
@@ -45,10 +44,8 @@
 }
 
 .subtitle-animal {
-	color: rgb(84, 84, 84);
-	font-family: Georgia;
+	color: var(--dark__84);
 	font-size: 20px;
-	font-weight: 400;
 	line-height: 23px;
 	letter-spacing: 6%;
 	text-align: center;
@@ -56,7 +53,6 @@
 
 .popUp__text {
 	color: rgb(0, 0, 0);
-	font-family: Georgia;
 	font-weight: 400;
 	line-height: 110%;
 	text-align: left;
@@ -64,10 +60,8 @@
 }
 
 .popup {
+	@include position(fixed, 50%, 50%);
 	display: none;
-	position: fixed;
-	left: 50%;
-	top: 50%;
 	z-index: 3;
 	width: 900px;
 	background: var(--white_250);
@@ -80,8 +74,8 @@
 	}
 
 	@include bigMobile {
-		width: 240px;
 		padding: 10px;
+		width: 240px;
 	}
 
 	&_active {
@@ -100,19 +94,17 @@
 		}
 
 		&-image {
-			width: 500px;
-			height: 500px;
+			@include sizes(500px, 500px);
 
 			@include desktop {
-				width: 350px;
-				height: 350px;
+				@include sizes(350px, 350px);
 			}
 		}
 	}
 
 	&__content {
-		width: 351px;
 		padding-top: 51px;
+		width: 351px;
 
 		@include desktop {
 			padding-top: 10px;
@@ -159,14 +151,11 @@
 		}
 	}
 
-	&__list {
-	}
-
 	&__item {
+		position: relative;
+		padding-left: 16px;
 		font-size: 15px;
 		font-weight: 700;
-		padding-left: 16px;
-		position: relative;
 		list-style: none;
 		color: rgb(0, 0, 0);
 
@@ -179,13 +168,10 @@
 		}
 
 		&:before {
-			position: absolute;
+			@include position(absolute, 7px, 0);
 			display: block;
 			content: '';
-			width: 4px;
-			height: 4px;
-			top: 7px;
-			left: 0px;
+			@include sizes(4px, 4px);
 			border-radius: 50%;
 			background: var(--nav__active-color);
 		}
@@ -211,27 +197,13 @@
 		transition: var(--transition);
 
 		&::before {
-			position: absolute;
-			display: block;
-			top: 50%;
-			left: calc(50% - 6px);
-			@include sizes(12px, 2px);
-			content: '';
+			@include popupCrossStyle;
 			transform: rotate(45deg);
-			background-color: var(--dark__buttons);
-			border-radius: 2px;
 		}
 
 		&:after {
-			position: absolute;
-			top: 50%;
-			left: calc(50% - 6px);
-			display: block;
-			content: '';
-			@include sizes(12px, 2px);
+			@include popupCrossStyle;
 			transform: rotate(-45deg);
-			background-color: var(--dark__buttons);
-			border-radius: 2px;
 		}
 
 		@include bigMobile {
@@ -247,20 +219,20 @@
 			background: var(--orange_hover);
 		}
 	}
-}
 
-.popup_shadow {
-	position: fixed;
-	display: none;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background: rgba(41, 41, 41, 0.6);
-	z-index: 1;
-	min-height: 100%;
-}
+	&_shadow {
+		position: fixed;
+		display: none;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(41, 41, 41, 0.6);
+		z-index: 1;
+		min-height: 100%;
 
-.popup_shadow-on {
-	display: block;
+		&-on {
+			display: block;
+		}
+	}
 }

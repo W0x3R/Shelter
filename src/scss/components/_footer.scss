@@ -82,6 +82,7 @@
 			&:first-of-type {
 				margin-bottom: 40px;
 			}
+
 			&:last-of-type {
 				margin-bottom: 40px;
 			}
@@ -105,10 +106,6 @@
 		line-height: 115%;
 		letter-spacing: 1.2px;
 	}
-
-	&__picture {
-	}
-
 	&__picture-image {
 		width: clamp(260px, 60vw, 300px);
 	}

@@ -17,7 +17,7 @@
 		position: absolute;
 		padding: 0;
 		@include sizes(52px, 52px);
-		border: 2px solid rgb(241, 205, 179);
+		border: 2px solid var(--nav__active-color);
 		border-radius: var(--buttons-borderRadius);
 		background: transparent;
 		cursor: pointer;
@@ -159,10 +159,8 @@
 		}
 	}
 
-	&__images-picture {
-	}
-
 	&__images-image {
+		@include sizes(270px, 270px);
 		margin-bottom: 23px;
 	}
 

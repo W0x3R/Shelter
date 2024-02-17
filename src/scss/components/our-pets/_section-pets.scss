@@ -74,10 +74,8 @@
 		}
 	}
 
-	&__images-picture {
-	}
-
 	&__images-image {
+		@include sizes(270px, 270px);
 		margin-bottom: 23px;
 	}
 
