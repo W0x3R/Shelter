@@ -275,6 +275,8 @@ const petInfoJSON = [
 	}
 ]
 
+
+
   
 
 /***/ }),
@@ -307,6 +309,264 @@ body.addEventListener('click', function (e) {
 })
 
 
+
+/***/ }),
+/* 6 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _paginationValues__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+
+
+const petsImages = document.querySelector('.pets__images')
+let startPage = 1;
+let itemsPerPage = 8;
+let maxPage = _paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"].length / itemsPerPage
+const leftStart = document.querySelector('.left-start')
+const left = document.querySelector('.left')
+const right = document.querySelector('.right');
+const rightEnd = document.querySelector('.right-end');
+const currentCount = document.querySelector('.pets__buttons-item_count')
+
+function createFigure(i) {
+	const figure = document.createElement('figure')
+	figure.classList.add('pets__images-figure')
+	figure.setAttribute('data-pet', _paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i].name)
+	figure.innerHTML = `<picture class="pets__images-picture">
+	<source
+		srcset="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@1x.webp 1x,./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@2x.webp 2x, ./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@3x.webp 3x"
+		type="image/webp">
+	<source
+		srcset="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@1x.avif 1x,./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@2x.avif 2x, ./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@3x.avif 3x"
+		type="image/avif">
+	<img class="pets__images-image" src="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@1x.png" srcset="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@2x.png 2x, 
+	./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@3x.png 3x" alt="${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i].alt
+		}">
+</picture>
+<figcaption>
+	<p class="pets__images-text  subtitle-animal">${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i].name
+		}</p >
+	<button class="pets__images-button">Learn more</button>
+</figcaption > `
+	petsImages.append(figure)
+}
+
+function loadItems() {
+	petsImages.innerHTML = '';
+
+	for (let i = (startPage - 1) * itemsPerPage; i < startPage * itemsPerPage; i++) {
+		createFigure(i)
+	}
+}
+
+loadItems()
+
+function setButtonsDisabled(btnOne, btnTwo) {
+	btnOne.classList.remove('pets__buttons-item_enabled')
+	btnOne.classList.add('pets__buttons-item_disabled')
+	btnOne.setAttribute('disabled', true)
+
+	btnTwo.classList.remove('pets__buttons-item_enabled')
+	btnTwo.classList.add('pets__buttons-item_disabled')
+	btnTwo.setAttribute('disabled', true)
+}
+
+function setButtonsEnabled(btnOne, btnTwo) {
+	btnOne.removeAttribute('disabled')
+	btnOne.classList.remove('pets__buttons-item_disabled')
+	btnOne.classList.add('pets__buttons-item_enabled')
+
+	btnTwo.removeAttribute('disabled')
+	btnTwo.classList.remove('pets__buttons-item_disabled')
+	btnTwo.classList.add('pets__buttons-item_enabled')
+}
+
+function clickLeftStartButton() {
+	startPage = 1;
+	currentCount.textContent = startPage;
+
+	setButtonsDisabled(leftStart, left)
+	setButtonsEnabled(right, rightEnd)
+	loadItems()
+}
+
+function clickLeftButton() {
+	--startPage
+	currentCount.textContent = startPage;
+
+	setButtonsEnabled(right, rightEnd)
+
+	if (startPage === 1) {
+		setButtonsDisabled(leftStart, left)
+	}
+	loadItems()
+}
+
+function clickRightButton() {
+	startPage++
+	currentCount.textContent = startPage;
+
+	setButtonsEnabled(leftStart, left)
+
+	if (startPage === maxPage) {
+		setButtonsDisabled(right, rightEnd)
+	}
+	loadItems()
+}
+
+function clickRightEndButton() {
+	startPage = maxPage;
+	currentCount.textContent = startPage;
+
+	setButtonsDisabled(right, rightEnd)
+	setButtonsEnabled(leftStart, left)
+	loadItems()
+}
+
+leftStart.addEventListener('click', clickLeftStartButton)
+left.addEventListener('click', clickLeftButton)
+right.addEventListener('click', clickRightButton)
+rightEnd.addEventListener('click', clickRightEndButton)
+
+
+
+/***/ }),
+/* 7 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const paginationValues = [
+	{
+		"name": "Katrine",
+		"alt": "Cat Katrine",
+		"imgName": "pets-katrine",
+	},
+	{
+		"name": "Jennifer",
+		"alt": "Dog Jennifer",
+		"imgName": "pets-jennifer"
+	},
+	{
+		"name": "Woody",
+		"alt": "Dog Woody",
+		"imgName": "pets-woody"
+	},
+	{
+		"name": "Sophia",
+		"alt": "Dog Sophia",
+		"imgName": "pets-sophia"
+	},
+	{
+		"name": "Timmy",
+		"alt": "Cat Timmy",
+		"imgName": "pets-timmy"
+	},
+	{
+		"name": "Charly",
+		"alt": "Dog Charly",
+		"imgName": "pets-charly"
+	},
+	{
+		"name": "Scarlett",
+		"alt": "Dog Scarlett",
+		"imgName": "pets-scarlet"
+	},
+	{
+		"name": "Freddie",
+		"alt": "Cat Freddie",
+		"imgName": "pets-freddie"
+	},
+	{
+		"name": "Timmy",
+		"alt": "Cat Timmy",
+		"imgName": "pets-timmy"
+	},
+
+	{
+		"name": "Charly",
+		"alt": "Dog Charly",
+		"imgName": "pets-charly"
+	},
+
+	{
+		"name": "Scarlett",
+		"alt": "Dog Scarlett",
+		"imgName": "pets-scarlet"
+	},
+
+	{
+		"name": "Freddie",
+		"alt": "Cat Freddie",
+		"imgName": "pets-freddie"
+	},
+	{
+		"name": "Katrine",
+		"alt": "Cat Katrine",
+		"imgName": "pets-katrine",
+	},
+	{
+		"name": "Jennifer",
+		"alt": "Dog Jennifer",
+		"imgName": "pets-jennifer"
+	},
+	{
+		"name": "Woody",
+		"alt": "Dog Woody",
+		"imgName": "pets-woody"
+
+	},
+	{
+		"name": "Sophia",
+		"alt": "Dog Sophia",
+		"imgName": "pets-sophia"
+	},
+	{
+		"name": "Freddie",
+		"alt": "Cat Freddie",
+		"imgName": "pets-freddie"
+	},
+	{
+		"name": "Timmy",
+		"alt": "Cat Timmy",
+		"imgName": "pets-timmy"
+	},
+
+	{
+		"name": "Charly",
+		"alt": "Dog Charly",
+		"imgName": "pets-charly"
+	},
+
+	{
+		"name": "Scarlett",
+		"alt": "Dog Scarlett",
+		"imgName": "pets-scarlet"
+	},
+
+	{
+		"name": "Freddie",
+		"alt": "Cat Freddie",
+		"imgName": "pets-freddie"
+	},
+	{
+		"name": "Katrine",
+		"alt": "Cat Katrine",
+		"imgName": "pets-katrine",
+	},
+	{
+		"name": "Jennifer",
+		"alt": "Dog Jennifer",
+		"imgName": "pets-jennifer"
+	},
+	{
+		"name": "Woody",
+		"alt": "Dog Woody",
+		"imgName": "pets-woody"
+
+	},
+]
+
+/* harmony default export */ __webpack_exports__["default"] = (paginationValues);
 
 /***/ })
 /******/ 	]);
@@ -372,6 +632,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _components_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _components_checkClickOut__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/* harmony import */ var _components_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+
+
+
 
 
 

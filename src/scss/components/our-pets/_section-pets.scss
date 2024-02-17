@@ -42,7 +42,7 @@
 		align-self: flex-start;
 		gap: 30px 40px;
 		align-self: center;
-		margin-bottom: 60px;
+		margin-bottom: 45px;
 		max-width: 1200px;
 
 		@include desktop {
@@ -97,23 +97,70 @@
 		cursor: pointer;
 		transition: var(--transition);
 	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		gap: 0 20px;
+		width: 100%;
 
-	&__link {
-		padding: var(--buttons-padding);
-		color: var(--dark__buttons);
-		background: var(--nav__active-color);
-		border-radius: var(--buttons-borderRadius);
-		font-size: 17px;
-		line-height: 130%;
-		letter-spacing: 1px;
-		transition: var(--transition);
+		&-item {
+			@include sizes(52px, 52px);
+			border: 2px solid var(--dark__205);
+			border-radius: var(--buttons-borderRadius);
+			color: var(--dark__205);
+			font-size: 20px;
+			font-family: 'Georgia';
 
-		@include hover {
-			background: var(--orange_hover);
-		}
+			&_disabled {
+				color: var(--dark__205);
+				background: transparent;
+				border: 2px solid var(--dark__205);
+			}
 
-		@include hover-none {
-			background: var(--orange_hover);
+			&_enabled {
+				border: 2px solid var(--nav__active-color);
+				background: transparent;
+				color: var(--dark__buttons);
+				cursor: pointer;
+				transition: var(--transition);
+
+				@include hover {
+					background: var(--orange_hover);
+				}
+
+				@include hover-none {
+					background: var(--orange_hover);
+				}
+			}
 		}
 	}
+}
+
+.left-start {
+	&::before {
+		content: '< <';
+	}
+}
+
+.left {
+	&::before {
+		content: '<';
+	}
+}
+
+.right {
+	&::before {
+		content: '>';
+	}
+}
+
+.right-end {
+	&::before {
+		content: '> >';
+	}
+}
+
+.current {
+	color: var(--dark__buttons);
+	background: var(--nav__active-color);
 }

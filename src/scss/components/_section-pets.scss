@@ -208,7 +208,7 @@
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(-360px);
+		transform: translateX(-1080px);
 	}
 }
 
@@ -217,7 +217,7 @@
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(-310px);
+		transform: translateX(-620px);
 	}
 }
 
@@ -232,7 +232,7 @@
 
 @keyframes moveRightAnimation1280 {
 	from {
-		transform: translateX(-360px);
+		transform: translateX(-1080px);
 	}
 	to {
 		transform: translateX(0);
@@ -241,7 +241,7 @@
 
 @keyframes moveRightAnimation768 {
 	from {
-		transform: translateX(-310px);
+		transform: translateX(-620px);
 	}
 	to {
 		transform: translateX(0);
