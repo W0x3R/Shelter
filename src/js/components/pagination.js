@@ -2,13 +2,24 @@ import paginationValues from "./paginationValues";
 
 const petsImages = document.querySelector('.pets__images')
 let startPage = 1;
-let itemsPerPage = 8;
-let maxPage = paginationValues.length / itemsPerPage
 const leftStart = document.querySelector('.left-start')
 const left = document.querySelector('.left')
 const right = document.querySelector('.right');
 const rightEnd = document.querySelector('.right-end');
-const currentCount = document.querySelector('.pets__buttons-item_count')
+let currentCount = document.querySelector('.pets__buttons-item_count')
+
+function getCountOfSlides() {
+	if (window.innerWidth >= 1280) {
+		return 8
+	} else if (window.innerWidth < 1280 && window.innerWidth >= 768) {
+		return 6
+	} else if (window.innerWidth < 768 && window.innerWidth >= 320) {
+		return 3
+	}
+}
+
+let itemsPerPage;
+let maxPage;
 
 function createFigure(i) {
 	const figure = document.createElement('figure')
@@ -34,9 +45,11 @@ function createFigure(i) {
 }
 
 function loadItems() {
+	itemsPerPage = getCountOfSlides();
 	petsImages.innerHTML = '';
 
 	for (let i = (startPage - 1) * itemsPerPage; i < startPage * itemsPerPage; i++) {
+		if (!paginationValues[i]) break
 		createFigure(i)
 	}
 }
@@ -85,6 +98,7 @@ function clickLeftButton() {
 }
 
 function clickRightButton() {
+	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
 	startPage++
 	currentCount.textContent = startPage;
 
@@ -97,6 +111,7 @@ function clickRightButton() {
 }
 
 function clickRightEndButton() {
+	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
 	startPage = maxPage;
 	currentCount.textContent = startPage;
 
@@ -110,3 +125,11 @@ left.addEventListener('click', clickLeftButton)
 right.addEventListener('click', clickRightButton)
 rightEnd.addEventListener('click', clickRightEndButton)
 
+
+window.addEventListener('resize', function (e) {
+	startPage = 1;
+	currentCount.textContent = startPage;
+	loadItems()
+	setButtonsDisabled(leftStart, left)
+	setButtonsEnabled(right, rightEnd)
+})

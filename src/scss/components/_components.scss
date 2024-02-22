@@ -218,6 +218,10 @@
 		@include hover-none {
 			background: var(--orange_hover);
 		}
+
+		&_hover {
+			background: var(--orange_hover);
+		}
 	}
 
 	&_shadow {

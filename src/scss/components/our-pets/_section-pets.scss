@@ -50,6 +50,10 @@
 			max-width: 708px;
 			justify-content: space-around;
 		}
+
+		@include bigMobile {
+			flex-direction: column;
+		}
 	}
 
 	&__images-figure {

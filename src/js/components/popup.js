@@ -37,3 +37,12 @@ slider.addEventListener('click', function (e) {
 
 })
 
+popup.addEventListener('mouseleave', function (e) {
+	const popupBtn = document.querySelector('.popup__button')
+	popupBtn.classList.add('popup__button_hover')
+})
+
+popup.addEventListener('mouseenter', function (e) {
+	const popupBtn = document.querySelector('.popup__button')
+	popupBtn.classList.remove('popup__button_hover')
+})
