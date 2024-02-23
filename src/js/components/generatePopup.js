@@ -1,4 +1,4 @@
-function generatePopUp(name, type, breed, description, age, inoculations, diseases, parasites) {
+const generatePopUp = (name, type, breed, description, age, inoculations, diseases, parasites) => {
 	return `
 		<picture class="popup__picture">
 		<source

@@ -4,11 +4,12 @@ const buttonLeft = document.querySelector('.left')
 const buttonRight = document.querySelector('.right')
 let isAnimateFinished = false;
 
-function createFigure(i) {
+const createFigure = (i) => {
 	const figure = document.createElement('figure')
 	figure.classList.add('pets__images-figure')
 	figure.setAttribute('data-pet', paginationValues[i].name)
-	figure.innerHTML = `<picture class="pets__images-picture">
+	figure.innerHTML =
+		`<picture class="pets__images-picture">
 	<source
 		srcset="./images/${paginationValues[i]['imgName']}@1x.webp 1x,./images/${paginationValues[i]['imgName']}@2x.webp 2x, ./images/${paginationValues[i]['imgName']}@3x.webp 3x"
 		type="image/webp">
@@ -27,7 +28,7 @@ function createFigure(i) {
 	slider.append(figure)
 }
 
-function loadItems() {
+const loadItems = () => {
 	slider.innerHTML = '';
 
 	for (let i = 0; i < paginationValues.length; i++) {
@@ -40,13 +41,10 @@ loadItems()
 buttonLeft.addEventListener('click', moveLeft)
 buttonRight.addEventListener('click', moveRight)
 
-function controlAnimation(arr, action, animationClass) {
-	arr.map(e => {
-		e.classList[action](animationClass)
-	});
-}
+const controlAnimation = (arr, action, animationClass) => arr.map(e => e.classList[action](animationClass))
 
-function getCountOfSlides() {
+
+const getCountOfSlides = () => {
 	if (window.innerWidth >= 1280) {
 		return 3
 	} else if (window.innerWidth < 1280 && window.innerWidth >= 768) {
@@ -56,11 +54,10 @@ function getCountOfSlides() {
 	}
 }
 
-function moveLeft() {
+const moveLeft = () => {
 	let countSlides = getCountOfSlides()
 	if (isAnimateFinished) return
 	isAnimateFinished = true
-
 	const sliderChildren = slider.children
 	const sliderChildrenArr = Array.from(sliderChildren)
 
@@ -86,12 +83,10 @@ function moveLeft() {
 	}, 710);
 }
 
-
-function moveRight() {
+const moveRight = () => {
 	let countSlides = getCountOfSlides()
 	if (isAnimateFinished) return
 	isAnimateFinished = true;
-
 	const sliderChildren = slider.children
 	let sliderChildrenArr = Array.from(sliderChildren)
 

@@ -1,14 +1,16 @@
 import paginationValues from "./paginationValues";
 
 const petsImages = document.querySelector('.pets__images')
-let startPage = 1;
 const leftStart = document.querySelector('.left-start')
 const left = document.querySelector('.left')
 const right = document.querySelector('.right');
 const rightEnd = document.querySelector('.right-end');
 let currentCount = document.querySelector('.pets__buttons-item_count')
+let startPage = 1;
+let itemsPerPage;
+let maxPage;
 
-function getCountOfSlides() {
+const getCountOfSlides = () => {
 	if (window.innerWidth >= 1280) {
 		return 8
 	} else if (window.innerWidth < 1280 && window.innerWidth >= 768) {
@@ -18,14 +20,12 @@ function getCountOfSlides() {
 	}
 }
 
-let itemsPerPage;
-let maxPage;
-
-function createFigure(i) {
+const createFigure = (i) => {
 	const figure = document.createElement('figure')
 	figure.classList.add('pets__images-figure')
 	figure.setAttribute('data-pet', paginationValues[i].name)
-	figure.innerHTML = `<picture class="pets__images-picture">
+	figure.innerHTML =
+		`<picture class="pets__images-picture">
 	<source
 		srcset="./images/${paginationValues[i]['imgName']}@1x.webp 1x,./images/${paginationValues[i]['imgName']}@2x.webp 2x, ./images/${paginationValues[i]['imgName']}@3x.webp 3x"
 		type="image/webp">
@@ -44,7 +44,7 @@ function createFigure(i) {
 	petsImages.append(figure)
 }
 
-function loadItems() {
+const loadItems = () => {
 	itemsPerPage = getCountOfSlides();
 	petsImages.innerHTML = '';
 
@@ -56,7 +56,7 @@ function loadItems() {
 
 loadItems()
 
-function setButtonsDisabled(btnOne, btnTwo) {
+const setButtonsDisabled = (btnOne, btnTwo) => {
 	btnOne.classList.remove('pets__buttons-item_enabled')
 	btnOne.classList.add('pets__buttons-item_disabled')
 	btnOne.setAttribute('disabled', true)
@@ -66,7 +66,7 @@ function setButtonsDisabled(btnOne, btnTwo) {
 	btnTwo.setAttribute('disabled', true)
 }
 
-function setButtonsEnabled(btnOne, btnTwo) {
+const setButtonsEnabled = (btnOne, btnTwo) => {
 	btnOne.removeAttribute('disabled')
 	btnOne.classList.remove('pets__buttons-item_disabled')
 	btnOne.classList.add('pets__buttons-item_enabled')
@@ -76,7 +76,7 @@ function setButtonsEnabled(btnOne, btnTwo) {
 	btnTwo.classList.add('pets__buttons-item_enabled')
 }
 
-function clickLeftStartButton() {
+const clickLeftStartButton = () => {
 	startPage = 1;
 	currentCount.textContent = startPage;
 
@@ -85,7 +85,7 @@ function clickLeftStartButton() {
 	loadItems()
 }
 
-function clickLeftButton() {
+const clickLeftButton = () => {
 	--startPage
 	currentCount.textContent = startPage;
 
@@ -97,7 +97,7 @@ function clickLeftButton() {
 	loadItems()
 }
 
-function clickRightButton() {
+const clickRightButton = () => {
 	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
 	startPage++
 	currentCount.textContent = startPage;
@@ -110,7 +110,7 @@ function clickRightButton() {
 	loadItems()
 }
 
-function clickRightEndButton() {
+const clickRightEndButton = () => {
 	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
 	startPage = maxPage;
 	currentCount.textContent = startPage;
@@ -125,11 +125,5 @@ left.addEventListener('click', clickLeftButton)
 right.addEventListener('click', clickRightButton)
 rightEnd.addEventListener('click', clickRightEndButton)
 
+window.addEventListener('resize', loadItems)
 
-window.addEventListener('resize', function (e) {
-	startPage = 1;
-	currentCount.textContent = startPage;
-	loadItems()
-	setButtonsDisabled(leftStart, left)
-	setButtonsEnabled(right, rightEnd)
-})
