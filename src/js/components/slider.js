@@ -38,10 +38,9 @@ const loadItems = () => {
 
 loadItems()
 
-buttonLeft.addEventListener('click', moveLeft)
-buttonRight.addEventListener('click', moveRight)
-
-const controlAnimation = (arr, action, animationClass) => arr.map(e => e.classList[action](animationClass))
+function controlAnimation(arr, action, animationClass) {
+	arr.map(e => e.classList[action](animationClass))
+}
 
 
 const getCountOfSlides = () => {
@@ -109,3 +108,6 @@ const moveRight = () => {
 		isAnimateFinished = false;
 	}, 610);
 }
+
+buttonLeft.addEventListener('click', moveLeft)
+buttonRight.addEventListener('click', moveRight)

@@ -3,13 +3,14 @@
 
 	.container {
 		padding-block: 75px 100px;
+		padding-top: 80px;
 
 		@include desktop {
-			padding: 80px 30px 100px;
+			padding: 80px 30px 85px;
 		}
 
 		@include bigMobile {
-			padding: 36px 10px 42px;
+			padding: 40px 10px 42px;
 		}
 	}
 
@@ -20,13 +21,11 @@
 	}
 
 	&__title {
-		margin-bottom: 67px;
-		max-width: 400px;
+		margin-bottom: 58px;
 		text-align: center;
-		letter-spacing: 6%;
 
 		@include desktop {
-			margin-bottom: 54px;
+			margin-bottom: 30px;
 		}
 
 		@include bigMobile {
@@ -42,17 +41,19 @@
 		align-self: flex-start;
 		gap: 30px 40px;
 		align-self: center;
-		margin-bottom: 45px;
+		margin-bottom: 56px;
 		max-width: 1200px;
 
 		@include desktop {
-			gap: 40px 30px;
+			gap: 27px 40px;
 			max-width: 708px;
-			justify-content: space-around;
+			justify-content: center;
+			margin-bottom: 36px;
 		}
 
 		@include bigMobile {
 			flex-direction: column;
+			margin-bottom: 42px;
 		}
 	}
 
@@ -80,7 +81,7 @@
 
 	&__images-image {
 		@include sizes(270px, 270px);
-		margin-bottom: 23px;
+		margin-bottom: 27px;
 	}
 
 	&__images-text {
@@ -106,6 +107,10 @@
 		justify-content: center;
 		gap: 0 20px;
 		width: 100%;
+
+		@include bigMobile {
+			gap: 0 10px;
+		}
 
 		&-item {
 			@include sizes(52px, 52px);

@@ -22,11 +22,12 @@
 	@include fluid-text(25, 768, 35);
 	font-weight: 400;
 	line-height: 130%;
-	letter-spacing: 1.6px;
+	letter-spacing: 2.1px;
 	text-align: left;
 	color: var(--dark__84);
 
 	@include bigMobile {
+		letter-spacing: 1.5px;
 		text-align: center;
 	}
 }

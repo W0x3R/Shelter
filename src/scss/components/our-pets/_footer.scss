@@ -9,7 +9,7 @@
 		}
 
 		@include bigMobile {
-			padding: 23px 10px 0;
+			padding: 30px 10px 0;
 		}
 	}
 
@@ -52,6 +52,10 @@
 
 			& .footer__contacts-title {
 				margin-bottom: 34px;
+
+				@include bigMobile {
+					margin-bottom: 39px;
+				}
 			}
 		}
 
@@ -68,6 +72,11 @@
 	&__contacts-title {
 		color: var(--white_255);
 		letter-spacing: 2px;
+
+		@include bigMobile {
+			max-width: 294px;
+			letter-spacing: 1.5px;
+		}
 	}
 
 	&__contacts-link {
@@ -80,7 +89,7 @@
 
 		@include bigMobile {
 			&:first-of-type {
-				margin-bottom: 40px;
+				margin-bottom: 35px;
 			}
 			&:last-of-type {
 				margin-bottom: 40px;

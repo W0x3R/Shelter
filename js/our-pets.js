@@ -1,1 +1,1418 @@
-!function(){"use strict";var e=[,function(e,a,n){n.r(a);var t=document.querySelector(".header"),o=document.querySelector(".nav__list"),s=document.querySelector(".burger"),i=function(e){s.classList[e]("burger_active"),o.classList[e]("nav__list_active"),document.body.classList[e]("body_fixed")};t.addEventListener("click",(function(e){(e.target.classList.contains("burger")||e.target.classList.contains("burger__line"))&&i("toggle"),"LI"!==e.target.tagName&&"A"!==e.target.tagName||i("remove")})),a.default=i},function(e,a,n){n.r(a),n.d(a,{setClassesStatePopup:function(){return d}});var t=n(3),o=n(4),s=document.querySelector(".pets__images"),i=document.querySelector(".popup"),r=document.querySelector(".popup_shadow"),l=Array.from(o.petInfo).reduce((function(e,a){return e[a.name]=a,e}),{}),d=function(e){document.body.classList[e]("body_popup_fixed"),i.classList[e]("popup_active"),r.classList[e]("popup_shadow-on")};s.addEventListener("click",(function(e){var a=e.target;if(!a.classList.contains("pets__images")){var n=a.closest("figure").dataset.pet,o=l[n],s=(0,t.default)(o.name,o.type,o.breed,o.description,o.age,o.inoculations,o.diseases,o.parasites);i.innerHTML=s,d("add"),document.querySelector(".popup__button").addEventListener("click",(function(e){d("remove")}))}})),i.addEventListener("mouseleave",(function(e){document.querySelector(".popup__button").classList.add("popup__button_hover")})),i.addEventListener("mouseenter",(function(e){document.querySelector(".popup__button").classList.remove("popup__button_hover")}))},function(e,a,n){n.r(a);a.default=function(e,a,n,t,o,s,i,r){return'\n\t\t<picture class="popup__picture">\n\t\t<source\n\t\t\tsrcset="./images/'.concat(e,'.webp"\n\t\t\ttype="image/webp">\n\t\t<source\n\t\t\tsrcset="./images/').concat(e,'.avif"\n\t\t\ttype="image/avif">\n\t\t<img class="popup__picture-image" src="./images/').concat(e,'.png", alt="').concat(e,'">\n\t\t</picture>\n\t\t<div class="popup__content">\n\t\t\t<h4 class="popup__title popUp__text">').concat(e,'</h4>\n\t\t\t<h5 class="popup__breed popUp__text">').concat(a," - ").concat(n,'</h5>\n\t\t\t<p class="popup__description popUp__text">').concat(t,'</p>\n\t\t\t<ul class="popup__list">\n\t\t\t\t<li class="popup__item">\n\t\t\t\t\tAge:\n\t\t\t\t\t<span class="popup__span">').concat(o,'</span>\n\t\t\t\t</li>\n\t\t\t\t<li class="popup__item">\n\t\t\t\t\tInoculations:\n\t\t\t\t\t<span class="popup__span">').concat(s,'</span>\n\t\t\t\t</li>\n\t\t\t\t<li class="popup__item">\n\t\t\t\t\tDiseases:\n\t\t\t\t\t<span class="popup__span">').concat(i,'</span>\n\t\t\t\t</li>\n\t\t\t\t<li class="popup__item">\n\t\t\t\t\tParasites:\n\t\t\t\t\t<span class="popup__span">').concat(r,'</span>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<button class="popup__button"></button>\n\t\t</div>')}},function(e,a,n){n.r(a),n.d(a,{petInfo:function(){return t}});var t=[{name:"Jennifer",type:"Dog",breed:"Labrador",description:"Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",age:"0 years 2 months",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Sophia",type:"Dog",breed:"Shih tzu",description:"Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"0 years 1 month",inoculations:["parvovirus"],diseases:["none"],parasites:["none"]},{name:"Woody",type:"Dog",breed:"Golden Retriever",description:"Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",age:"3 years 6 months",inoculations:["adenovirus","distemper"],diseases:["right back leg mobility reduced"],parasites:["none"]},{name:"Scarlett",type:"Dog",breed:"Jack Russell Terrier",description:"Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",age:"0 years 3 months",inoculations:["parainfluenza"],diseases:["none"],parasites:["none"]},{name:"Katrine",type:"Cat",breed:"British Shorthair",description:"Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",age:"0 years 6 months",inoculations:["panleukopenia"],diseases:["none"],parasites:["none"]},{name:"Timmy",type:"Cat",breed:"British Shorthair",description:"Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",age:"2 years 3 months",inoculations:["calicivirus","viral rhinotracheitis"],diseases:["kidney stones"],parasites:["none"]},{name:"Freddie",type:"Cat",breed:"British Shorthair",description:"Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",age:"0 years 2 months",inoculations:["rabies"],diseases:["none"],parasites:["none"]},{name:"Charly",type:"Dog",breed:"Jack Russell Terrier",description:"This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",age:"8 years",inoculations:["bordetella bronchiseptica","leptospirosis"],diseases:["deafness","blindness"],parasites:["lice","fleas"]},{name:"Hunter",type:"Dog",breed:"Jack Russell Terrier",description:"This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",age:"1 years 5 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Skrull",type:"Dog",breed:"Jack Russell Terrier",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"2 years 3 month",inoculations:["calicivirus"],diseases:["none"],parasites:["none"]},{name:"Pory",type:"Cat",breed:"Pooch",description:"I am a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",age:"1 years 4 month",inoculations:["bordetella "],diseases:["blindness"],parasites:["none"]},{name:"Tanos",type:"Dog",breed:"Chihuahua",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"5 years 4 month",inoculations:["bordetella "],diseases:["blindness"],parasites:["none"]},{name:"Rex",type:"Dog",breed:"German Shepherd",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"1 years 1 month",inoculations:["bordetella","bronchiseptica"],diseases:["blindness"],parasites:["none"]},{name:"Willson",type:"Dog",breed:"Pooch",description:"I am a handsome sweetheart who loves people and melts for chin scratches!",age:"0 years 3 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Tor",type:"Dog",breed:"Dalmatian",description:"This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",age:"2 years 1 month",inoculations:["none"],diseases:["kidney stones"],parasites:["none"]},{name:"Monna",type:"Cat",breed:"Pooch",description:"I am a handsome sweetheart who loves people and melts for chin scratches!",age:"0 years 6 month",inoculations:["none"],diseases:["none"],parasites:["helminth"]},{name:"Donatan",type:"Dog",breed:"Shiba Inu",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"1 years 10 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Koddy",type:"Cat",breed:"Toyger",description:"I am a handsome sweetheart who loves people and melts for chin scratches!",age:"0 years 5 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Butty",type:"Dog",breed:"French Bulldog",description:"This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",age:"0 years 8 month",inoculations:["none"],diseases:["kidney stones"],parasites:["none"]},{name:"July",type:"Dog",breed:"Chihuahua",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"5 years 3 month",inoculations:["viral rhinotracheitis"],diseases:["kidney stones"],parasites:["none"]},{name:"Perry",type:"Dog",breed:"French Bulldog",description:"She is the perfect combination of silly and sweet. She is eager to please, loves her human and dog companions, and believes she is a professional MMA wrestler in her spare time.",age:"1 years 5 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Missy",type:"Dog",breed:"Labrador",description:"He’s mild mannered and really just wants to spend his time outside or laying next to you being pet. He is extremely low energy but has a lot of.",age:"0 years 7 month",inoculations:["none"],diseases:["none"],parasites:["lice","fleas"]},{name:"Lolly",type:"Dog",breed:"Pooch",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"2 years 3 month",inoculations:["calicivirus"],diseases:["deafness"],parasites:["lice","fleas"]},{name:"Iron",type:"Dog",breed:"Parson Russell Terrier",description:"This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",age:"1 years 5 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Wonder",type:"Dog",breed:"French Bulldog",description:"I am a handsome sweetheart who loves people and melts for chin scratches!",age:"3 years 9 month",inoculations:["none"],diseases:["none"],parasites:["lice","fleas"]},{name:"Molly",type:"Dog",breed:"Spaniel",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"1 years 9 month",inoculations:["none"],diseases:["blindness"],parasites:["fleas"]},{name:"Elton",type:"Dog",breed:"Pooch",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"1 years 9 month",inoculations:["none"],diseases:["blindness"],parasites:["fleas"]},{name:"Cola",type:"Dog",breed:"Brazilian Terrier",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"4 years 4 month",inoculations:["adenovirus"],diseases:["deafness"],parasites:["fleas"]},{name:"Doran",type:"Dog",breed:"German Shepherd",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"2 years 7 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Face",type:"Dog",breed:"Pooch",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"6 years 4 month",inoculations:["none"],diseases:["blindness"],parasites:["none"]},{name:"Fold",type:"Dog",breed:"American Staffordshire Bulldog",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"3 years 2 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Jhon",type:"Dog",breed:"Pooch",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"1 years 2 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Molav",type:"Dog",breed:"French Bulldog",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"1 years 5 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Monika",type:"Dog",breed:"English bulldog",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"0 years 3 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Nomad",type:"Dog",breed:"Pooch",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"1 years 1 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Rikky",type:"Dog",breed:"Pooch",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"5 years 3 month",inoculations:["viral rhinotracheitis"],diseases:["Blindness"],parasites:["none"]},{name:"Rolls",type:"Dog",breed:"Pooch",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"3 years 1 month",inoculations:["viral rhinotracheitis"],diseases:["none"],parasites:["none"]},{name:"Ronny",type:"Dog",breed:"English bulldog",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"0 years 4 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Smile",type:"Dog",breed:"Pooch",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"0 years 6 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Jessy",type:"Dog",breed:"Tibetan mastiff",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"0 years 4 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Poolly",type:"Dog",breed:"Bedlington Terrier",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"0 years 9 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Salem",type:"Dog",breed:"Newfoundland",description:"I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",age:"2 years 11 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Spoon",type:"Dog",breed:"American Cocker Spaniel",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"4 years 4 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Yammy",type:"Dog",breed:"Chinese Crested",description:"This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",age:"7 years 1 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Blacky",type:"Dog",breed:"Pooch",description:"I am a friendly and laid back senior who enjoys chatting and being pet!",age:"3 years 8 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Bony",type:"Dog",breed:"Bull Terrier",description:"I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",age:"2 years 11 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Ember",type:"Dog",breed:"Cavalier King Charles Spaniel",description:"This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",age:"3 years 8 month",inoculations:["none"],diseases:["none"],parasites:["none"]},{name:"Huskar",type:"Dog",breed:"Husky",description:"I am a friendly and laid back senior who enjoys chatting and being pet!.",age:"1 years 1 month",inoculations:["none"],diseases:["none"],parasites:["none"]}]},function(e,a,n){n.r(a);var t=n(1),o=n(2);document.body.addEventListener("click",(function(e){!function(e){e.target.closest(".nav__list")||e.target.closest(".burger")||(0,t.default)("remove")}(e),function(e){e.target.classList.contains("popup_shadow-on")&&(0,o.setClassesStatePopup)("remove")}(e)}))},function(e,a,n){n.r(a);var t,o,s=n(7),i=document.querySelector(".pets__images"),r=document.querySelector(".left-start"),l=document.querySelector(".left"),d=document.querySelector(".right"),m=document.querySelector(".right-end"),p=document.querySelector(".pets__buttons-item_count"),c=1,h=function(e){var a=document.createElement("figure");a.classList.add("pets__images-figure"),a.setAttribute("data-pet",s.default[e].name),a.innerHTML='<picture class="pets__images-picture">\n\t<source\n\t\tsrcset="./images/'.concat(s.default[e].imgName,"@1x.webp 1x,./images/").concat(s.default[e].imgName,"@2x.webp 2x, ./images/").concat(s.default[e].imgName,'@3x.webp 3x"\n\t\ttype="image/webp">\n\t<source\n\t\tsrcset="./images/').concat(s.default[e].imgName,"@1x.avif 1x,./images/").concat(s.default[e].imgName,"@2x.avif 2x, ./images/").concat(s.default[e].imgName,'@3x.avif 3x"\n\t\ttype="image/avif">\n\t<img class="pets__images-image" src="./images/').concat(s.default[e].imgName,'@1x.png" srcset="./images/').concat(s.default[e].imgName,"@2x.png 2x, \n\t./images/").concat(s.default[e].imgName,'@3x.png 3x" alt="').concat(s.default[e].alt,'">\n</picture>\n<figcaption>\n\t<p class="pets__images-text  subtitle-animal">').concat(s.default[e].name,'</p >\n\t<button class="pets__images-button">Learn more</button>\n</figcaption > '),i.append(a)},g=function(){t=window.innerWidth>=1280?8:window.innerWidth<1280&&window.innerWidth>=768?6:window.innerWidth<768&&window.innerWidth>=320?3:void 0,i.innerHTML="";for(var e=(c-1)*t;e<c*t&&s.default[e];e++)h(e)};g();var y=function(e,a){e.classList.remove("pets__buttons-item_enabled"),e.classList.add("pets__buttons-item_disabled"),e.setAttribute("disabled",!0),a.classList.remove("pets__buttons-item_enabled"),a.classList.add("pets__buttons-item_disabled"),a.setAttribute("disabled",!0)},u=function(e,a){e.removeAttribute("disabled"),e.classList.remove("pets__buttons-item_disabled"),e.classList.add("pets__buttons-item_enabled"),a.removeAttribute("disabled"),a.classList.remove("pets__buttons-item_disabled"),a.classList.add("pets__buttons-item_enabled")};r.addEventListener("click",(function(){c=1,p.textContent=c,y(r,l),u(d,m),g()})),l.addEventListener("click",(function(){--c,p.textContent=c,u(d,m),1===c&&y(r,l),g()})),d.addEventListener("click",(function(){o=Math.ceil(s.default.length/t),c++,p.textContent=c,u(r,l),c===o&&y(d,m),g()})),m.addEventListener("click",(function(){o=Math.ceil(s.default.length/t),c=o,p.textContent=c,y(d,m),u(r,l),g()})),window.addEventListener("resize",g)},function(e,a,n){n.r(a);a.default=[{name:"Katrine",alt:"Cat Katrine",imgName:"pets-katrine"},{name:"Jennifer",alt:"Dog Jennifer",imgName:"pets-jennifer"},{name:"Woody",alt:"Dog Woody",imgName:"pets-woody"},{name:"Sophia",alt:"Dog Sophia",imgName:"pets-sophia"},{name:"Timmy",alt:"Cat Timmy",imgName:"pets-timmy"},{name:"Charly",alt:"Dog Charly",imgName:"pets-charly"},{name:"Scarlett",alt:"Dog Scarlett",imgName:"pets-scarlet"},{name:"Freddie",alt:"Cat Freddie",imgName:"pets-freddie"},{name:"Hunter",alt:"Dog Hunter",imgName:"pets-hunter"},{name:"Skrull",alt:"Dog Skrull",imgName:"pets-skrull"},{name:"Pory",alt:"Cat Pory",imgName:"pets-pory"},{name:"Tanos",alt:"Dog Tanos",imgName:"pets-tanos"},{name:"Rex",alt:"Dog Rex",imgName:"pets-rex"},{name:"Willson",alt:"Dog Willson",imgName:"pets-willson"},{name:"Tor",alt:"Dog Tor",imgName:"pets-tor"},{name:"Monna",alt:"Cat Monna",imgName:"pets-monna"},{name:"Donatan",alt:"Dog Donatan",imgName:"pets-donatan"},{name:"Koddy",alt:"Dog Koddy",imgName:"pets-koddy"},{name:"Butty",alt:"Dog Butty",imgName:"pets-butty"},{name:"July",alt:"Dog July",imgName:"pets-july"},{name:"Perry",alt:"Dog Perry",imgName:"pets-perry"},{name:"Missy",alt:"Dog Missy",imgName:"pets-missy"},{name:"Lolly",alt:"Dog Lolly",imgName:"pets-lolly"},{name:"Iron",alt:"Dog Iron",imgName:"pets-iron"},{name:"Wonder",alt:"Dog Wonder",imgName:"pets-wonder"},{name:"Molly",alt:"Dog Molly",imgName:"pets-molly"},{name:"Elton",alt:"Dog Elton",imgName:"pets-elton"},{name:"Cola",alt:"Dog Cola",imgName:"pets-cola"},{name:"Doran",alt:"Dog Doran",imgName:"pets-doran"},{name:"Face",alt:"Dog Face",imgName:"pets-face"},{name:"Fold",alt:"Dog Fold",imgName:"pets-fold"},{name:"Jhon",alt:"Dog Jhon",imgName:"pets-jhon"},{name:"Molav",alt:"Dog Molav",imgName:"pets-molav"},{name:"Monika",alt:"Dog Monika",imgName:"pets-monika"},{name:"Nomad",alt:"Dog Nomad",imgName:"pets-nomad"},{name:"Rikky",alt:"Dog Rikky",imgName:"pets-rikky"},{name:"Rolls",alt:"Dog Rolls",imgName:"pets-rolls"},{name:"Ronny",alt:"Dog Ronny",imgName:"pets-ronny"},{name:"Smile",alt:"Dog Smile",imgName:"pets-smile"},{name:"Jessy",alt:"Dog Jessy",imgName:"pets-jessy"},{name:"Poolly",alt:"Dog Poolly",imgName:"pets-poolly"},{name:"Salem",alt:"Dog Salem",imgName:"pets-salem"},{name:"Spoon",alt:"Dog Spoon",imgName:"pets-spoon"},{name:"Yammy",alt:"Dog Yammy",imgName:"pets-yammy"},{name:"Blacky",alt:"Dog Blacky",imgName:"pets-blacky"},{name:"Bony",alt:"Dog Bony",imgName:"pets-bony"},{name:"Ember",alt:"Dog Ember",imgName:"pets-ember"},{name:"Huskar",alt:"Dog Huskar",imgName:"pets-huskar"}]}],a={};function n(t){var o=a[t];if(void 0!==o)return o.exports;var s=a[t]={exports:{}};return e[t](s,s.exports,n),s.exports}n.d=function(e,a){for(var t in a)n.o(a,t)&&!n.o(e,t)&&Object.defineProperty(e,t,{enumerable:!0,get:a[t]})},n.o=function(e,a){return Object.prototype.hasOwnProperty.call(e,a)},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})};var t={};!function(){n.r(t);n(1),n(2),n(5),n(6)}()}();
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ([
+/* 0 */,
+/* 1 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const header = document.querySelector('.header')
+const navList = document.querySelector('.nav__list')
+const burger = document.querySelector('.burger');
+
+const setClassesStateBurger = (state) => {
+	burger.classList[state]('burger_active')
+	navList.classList[state]('nav__list_active')
+	document.body.classList[state]('body_fixed')
+}
+
+const openBurger = () => setClassesStateBurger('toggle')
+const closeBurger = () => setClassesStateBurger('remove')
+
+header.addEventListener('click', function (e) {
+	if (e.target.classList.contains('burger') || e.target.classList.contains('burger__line')) {
+		openBurger()
+	}
+	if (e.target.tagName === 'LI' || e.target.tagName === 'A') {
+		closeBurger()
+	}
+})
+
+/* harmony default export */ __webpack_exports__["default"] = (setClassesStateBurger);
+
+
+/***/ }),
+/* 2 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setClassesStatePopup: function() { return /* binding */ setClassesStatePopup; }
+/* harmony export */ });
+/* harmony import */ var _generatePopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _pets_info__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+
+
+
+const slider = document.querySelector('.pets__images')
+const popup = document.querySelector('.popup')
+const popupShadow = document.querySelector('.popup_shadow')
+
+const petInfoObject = Array.from(_pets_info__WEBPACK_IMPORTED_MODULE_1__.petInfo).reduce((acc, e) => {
+	acc[e.name] = e
+	return acc
+}, {})
+
+const setClassesStatePopup = (state) => {
+	document.body.classList[state]('body_popup_fixed')
+	popup.classList[state]('popup_active')
+	popupShadow.classList[state]('popup_shadow-on')
+}
+
+slider.addEventListener('click', function (e) {
+	const target = e.target
+	if (!target.classList.contains('pets__images')) {
+		const closestFigure = target.closest('figure')
+		const figureDataValue = closestFigure.dataset.pet
+		const findItem = petInfoObject[figureDataValue]
+		const popUpInner =
+			(0,_generatePopup__WEBPACK_IMPORTED_MODULE_0__["default"])(findItem.name, findItem.type, findItem.breed, findItem.description, findItem.age, findItem.inoculations, findItem.diseases, findItem.parasites)
+		popup.innerHTML = popUpInner
+		setClassesStatePopup('add')
+
+		const popupBtn = document.querySelector('.popup__button')
+		popupBtn.addEventListener('click', function (e) {
+			setClassesStatePopup('remove')
+		})
+	}
+})
+
+popup.addEventListener('mouseleave', function (e) {
+	const popupBtn = document.querySelector('.popup__button')
+	popupBtn.classList.add('popup__button_hover')
+})
+
+popup.addEventListener('mouseenter', function (e) {
+	const popupBtn = document.querySelector('.popup__button')
+	popupBtn.classList.remove('popup__button_hover')
+})
+
+/***/ }),
+/* 3 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const generatePopUp = (name, type, breed, description, age, inoculations, diseases, parasites) => {
+	return `
+		<picture class="popup__picture">
+		<source
+			srcset="./images/${name}.webp"
+			type="image/webp">
+		<source
+			srcset="./images/${name}.avif"
+			type="image/avif">
+		<img class="popup__picture-image" src="./images/${name}.png", alt="${name}">
+		</picture>
+		<div class="popup__content">
+			<h4 class="popup__title popUp__text">${name}</h4>
+			<h5 class="popup__breed popUp__text">${type} - ${breed}</h5>
+			<p class="popup__description popUp__text">${description}</p>
+			<ul class="popup__list">
+				<li class="popup__item">
+					Age:
+					<span class="popup__span">${age}</span>
+				</li>
+				<li class="popup__item">
+					Inoculations:
+					<span class="popup__span">${inoculations}</span>
+				</li>
+				<li class="popup__item">
+					Diseases:
+					<span class="popup__span">${diseases}</span>
+				</li>
+				<li class="popup__item">
+					Parasites:
+					<span class="popup__span">${parasites}</span>
+				</li>
+			</ul>
+			<button class="popup__button"></button>
+		</div>`
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (generatePopUp);
+
+/***/ }),
+/* 4 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   petInfo: function() { return /* binding */ petInfoJSON; }
+/* harmony export */ });
+const petInfoJSON = [
+	{
+		"name": "Jennifer",
+		"type": "Dog",
+		"breed": "Labrador",
+		"description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
+		"age": "0 years 2 months",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Sophia",
+		"type": "Dog",
+		"breed": "Shih tzu",
+		"description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "0 years 1 month",
+		"inoculations": [
+			"parvovirus"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Woody",
+		"type": "Dog",
+		"breed": "Golden Retriever",
+		"description": "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
+		"age": "3 years 6 months",
+		"inoculations": [
+			"adenovirus",
+			"distemper"
+		],
+		"diseases": [
+			"right back leg mobility reduced"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Scarlett",
+		"type": "Dog",
+		"breed": "Jack Russell Terrier",
+		"description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
+		"age": "0 years 3 months",
+		"inoculations": [
+			"parainfluenza"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Katrine",
+		"type": "Cat",
+		"breed": "British Shorthair",
+		"description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
+		"age": "0 years 6 months",
+		"inoculations": [
+			"panleukopenia"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Timmy",
+		"type": "Cat",
+		"breed": "British Shorthair",
+		"description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
+		"age": "2 years 3 months",
+		"inoculations": [
+			"calicivirus",
+			"viral rhinotracheitis"
+		],
+		"diseases": [
+			"kidney stones"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Freddie",
+		"type": "Cat",
+		"breed": "British Shorthair",
+		"description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
+		"age": "0 years 2 months",
+		"inoculations": [
+			"rabies"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Charly",
+		"type": "Dog",
+		"breed": "Jack Russell Terrier",
+		"description": "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+		"age": "8 years",
+		"inoculations": [
+			"bordetella bronchiseptica",
+			"leptospirosis"
+		],
+		"diseases": [
+			"deafness",
+			"blindness"
+		],
+		"parasites": [
+			"lice",
+			"fleas"
+		]
+	},
+	{
+		"name": "Hunter",
+		"type": "Dog",
+		"breed": "Jack Russell Terrier",
+		"description": "This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+		"age": "1 years 5 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Skrull",
+		"type": "Dog",
+		"breed": "Jack Russell Terrier",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "2 years 3 month",
+		"inoculations": [
+			"calicivirus"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Pory",
+		"type": "Cat",
+		"breed": "Pooch",
+		"description": "I am a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
+		"age": "1 years 4 month",
+		"inoculations": [
+			"bordetella "
+		],
+		"diseases": [
+			"blindness"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Tanos",
+		"type": "Dog",
+		"breed": "Chihuahua",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "5 years 4 month",
+		"inoculations": [
+			"bordetella "
+		],
+		"diseases": [
+			"blindness"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Rex",
+		"type": "Dog",
+		"breed": "German Shepherd",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "1 years 1 month",
+		"inoculations": [
+			"bordetella",
+			"bronchiseptica"
+		],
+		"diseases": [
+			"blindness"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Willson",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am a handsome sweetheart who loves people and melts for chin scratches!",
+		"age": "0 years 3 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Tor",
+		"type": "Dog",
+		"breed": "Dalmatian",
+		"description": "This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+		"age": "2 years 1 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"kidney stones"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Monna",
+		"type": "Cat",
+		"breed": "Pooch",
+		"description": "I am a handsome sweetheart who loves people and melts for chin scratches!",
+		"age": "0 years 6 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"helminth"
+		]
+	},
+	{
+		"name": "Donatan",
+		"type": "Dog",
+		"breed": "Shiba Inu",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "1 years 10 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Koddy",
+		"type": "Cat",
+		"breed": "Toyger",
+		"description": "I am a handsome sweetheart who loves people and melts for chin scratches!",
+		"age": "0 years 5 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Butty",
+		"type": "Dog",
+		"breed": "French Bulldog",
+		"description": "This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+		"age": "0 years 8 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"kidney stones"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "July",
+		"type": "Dog",
+		"breed": "Chihuahua",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "5 years 3 month",
+		"inoculations": [
+			"viral rhinotracheitis"
+		],
+		"diseases": [
+			"kidney stones"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Perry",
+		"type": "Dog",
+		"breed": "French Bulldog",
+		"description": "She is the perfect combination of silly and sweet. She is eager to please, loves her human and dog companions, and believes she is a professional MMA wrestler in her spare time.",
+		"age": "1 years 5 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Missy",
+		"type": "Dog",
+		"breed": "Labrador",
+		"description": "He’s mild mannered and really just wants to spend his time outside or laying next to you being pet. He is extremely low energy but has a lot of.",
+		"age": "0 years 7 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"lice",
+			"fleas"
+		]
+	},
+	{
+		"name": "Lolly",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "2 years 3 month",
+		"inoculations": [
+			"calicivirus"
+		],
+		"diseases": [
+			"deafness"
+		],
+		"parasites": [
+			"lice",
+			"fleas"
+		]
+	},
+	{
+		"name": "Iron",
+		"type": "Dog",
+		"breed": "Parson Russell Terrier",
+		"description": "This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+		"age": "1 years 5 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none",
+		]
+	},
+	{
+		"name": "Wonder",
+		"type": "Dog",
+		"breed": "French Bulldog",
+		"description": "I am a handsome sweetheart who loves people and melts for chin scratches!",
+		"age": "3 years 9 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"lice",
+			"fleas"
+		]
+	},
+	{
+		"name": "Molly",
+		"type": "Dog",
+		"breed": "Spaniel",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "1 years 9 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"blindness"
+		],
+		"parasites": [
+			"fleas"
+		]
+	},
+	{
+		"name": "Elton",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "1 years 9 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"blindness"
+		],
+		"parasites": [
+			"fleas"
+		]
+	},
+	{
+		"name": "Cola",
+		"type": "Dog",
+		"breed": "Brazilian Terrier",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "4 years 4 month",
+		"inoculations": [
+			"adenovirus"
+		],
+		"diseases": [
+			"deafness"
+		],
+		"parasites": [
+			"fleas"
+		]
+	},
+	{
+		"name": "Doran",
+		"type": "Dog",
+		"breed": "German Shepherd",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "2 years 7 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Face",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "6 years 4 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"blindness"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Fold",
+		"type": "Dog",
+		"breed": "American Staffordshire Bulldog",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "3 years 2 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Jhon",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "1 years 2 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Molav",
+		"type": "Dog",
+		"breed": "French Bulldog",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "1 years 5 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Monika",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "0 years 3 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Nomad",
+		"type": "Dog",
+		"breed": "English bulldog",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "1 years 1 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Rikky",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "5 years 3 month",
+		"inoculations": [
+			"viral rhinotracheitis"
+		],
+		"diseases": [
+			"Blindness"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Rolls",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "3 years 1 month",
+		"inoculations": [
+			"viral rhinotracheitis"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Ronny",
+		"type": "Dog",
+		"breed": "English bulldog",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "0 years 4 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Smile",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "0 years 6 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Jessy",
+		"type": "Dog",
+		"breed": "Tibetan mastiff",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "0 years 4 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Poolly",
+		"type": "Dog",
+		"breed": "Bedlington Terrier",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "0 years 9 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Salem",
+		"type": "Dog",
+		"breed": "Newfoundland",
+		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
+		"age": "2 years 11 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Spoon",
+		"type": "Dog",
+		"breed": "American Cocker Spaniel",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "4 years 4 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Yammy",
+		"type": "Dog",
+		"breed": "Chinese Crested",
+		"description": "This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+		"age": "7 years 1 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Blacky",
+		"type": "Dog",
+		"breed": "Pooch",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
+		"age": "3 years 8 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Bony",
+		"type": "Dog",
+		"breed": "Bull Terrier",
+		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+		"age": "2 years 11 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Ember",
+		"type": "Dog",
+		"breed": "Cavalier King Charles Spaniel",
+		"description": "This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
+		"age": "3 years 8 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	},
+	{
+		"name": "Huskar",
+		"type": "Dog",
+		"breed": "Husky",
+		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!.",
+		"age": "1 years 1 month",
+		"inoculations": [
+			"none"
+		],
+		"diseases": [
+			"none"
+		],
+		"parasites": [
+			"none"
+		]
+	}
+]
+
+
+  
+
+/***/ }),
+/* 5 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+
+
+
+const checkClickOutBurger = (e) => {
+	if (!e.target.closest('.nav__list') && !e.target.closest('.burger')) {
+		(0,_burger__WEBPACK_IMPORTED_MODULE_0__["default"])('remove')
+	}
+}
+
+const checkClickOutPopUp = (e) => {
+	if (e.target.classList.contains('popup_shadow-on')) {
+		(0,_popup__WEBPACK_IMPORTED_MODULE_1__.setClassesStatePopup)('remove')
+	}
+}
+
+document.body.addEventListener('click', function (e) {
+	checkClickOutBurger(e)
+	checkClickOutPopUp(e)
+})
+
+
+
+/***/ }),
+/* 6 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _paginationValues__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+
+
+const petsImages = document.querySelector('.pets__images')
+const leftStart = document.querySelector('.left-start')
+const left = document.querySelector('.left')
+const right = document.querySelector('.right');
+const rightEnd = document.querySelector('.right-end');
+let currentCount = document.querySelector('.pets__buttons-item_count')
+let startPage = 1;
+let itemsPerPage;
+let maxPage;
+
+const getCountOfSlides = () => {
+	if (window.innerWidth >= 1280) {
+		return 8
+	} else if (window.innerWidth < 1280 && window.innerWidth >= 768) {
+		return 6
+	} else if (window.innerWidth < 768 && window.innerWidth >= 320) {
+		return 3
+	}
+}
+
+const createFigure = (i) => {
+	const figure = document.createElement('figure')
+	figure.classList.add('pets__images-figure')
+	figure.setAttribute('data-pet', _paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i].name)
+	figure.innerHTML =
+		`<picture class="pets__images-picture">
+	<source
+		srcset="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@1x.webp 1x,./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@2x.webp 2x, ./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@3x.webp 3x"
+		type="image/webp">
+	<source
+		srcset="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@1x.avif 1x,./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@2x.avif 2x, ./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@3x.avif 3x"
+		type="image/avif">
+	<img class="pets__images-image" src="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@1x.png" srcset="./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@2x.png 2x, 
+	./images/${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]['imgName']}@3x.png 3x" alt="${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i].alt
+		}">
+</picture>
+<figcaption>
+	<p class="pets__images-text  subtitle-animal">${_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i].name
+		}</p >
+	<button class="pets__images-button">Learn more</button>
+</figcaption > `
+	petsImages.append(figure)
+}
+
+const loadItems = () => {
+	itemsPerPage = getCountOfSlides();
+	petsImages.innerHTML = '';
+
+	for (let i = (startPage - 1) * itemsPerPage; i < startPage * itemsPerPage; i++) {
+		if (!_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"][i]) break
+		createFigure(i)
+	}
+}
+
+loadItems()
+
+const setButtonsDisabled = (btnOne, btnTwo) => {
+	btnOne.classList.remove('pets__buttons-item_enabled')
+	btnOne.classList.add('pets__buttons-item_disabled')
+	btnOne.setAttribute('disabled', true)
+
+	btnTwo.classList.remove('pets__buttons-item_enabled')
+	btnTwo.classList.add('pets__buttons-item_disabled')
+	btnTwo.setAttribute('disabled', true)
+}
+
+const setButtonsEnabled = (btnOne, btnTwo) => {
+	btnOne.removeAttribute('disabled')
+	btnOne.classList.remove('pets__buttons-item_disabled')
+	btnOne.classList.add('pets__buttons-item_enabled')
+
+	btnTwo.removeAttribute('disabled')
+	btnTwo.classList.remove('pets__buttons-item_disabled')
+	btnTwo.classList.add('pets__buttons-item_enabled')
+}
+
+const clickLeftStartButton = () => {
+	startPage = 1;
+	currentCount.textContent = startPage;
+
+	setButtonsDisabled(leftStart, left)
+	setButtonsEnabled(right, rightEnd)
+	loadItems()
+}
+
+const clickLeftButton = () => {
+	--startPage
+	currentCount.textContent = startPage;
+
+	setButtonsEnabled(right, rightEnd)
+
+	if (startPage === 1) {
+		setButtonsDisabled(leftStart, left)
+	}
+	loadItems()
+}
+
+const clickRightButton = () => {
+	maxPage = Math.ceil(_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"].length / itemsPerPage)
+	startPage++
+	currentCount.textContent = startPage;
+
+	setButtonsEnabled(leftStart, left)
+
+	if (startPage === maxPage) {
+		setButtonsDisabled(right, rightEnd)
+	}
+	loadItems()
+}
+
+const clickRightEndButton = () => {
+	maxPage = Math.ceil(_paginationValues__WEBPACK_IMPORTED_MODULE_0__["default"].length / itemsPerPage)
+	startPage = maxPage;
+	currentCount.textContent = startPage;
+
+	setButtonsDisabled(right, rightEnd)
+	setButtonsEnabled(leftStart, left)
+	loadItems()
+}
+
+leftStart.addEventListener('click', clickLeftStartButton)
+left.addEventListener('click', clickLeftButton)
+right.addEventListener('click', clickRightButton)
+rightEnd.addEventListener('click', clickRightEndButton)
+
+window.addEventListener('resize', loadItems)
+
+
+
+/***/ }),
+/* 7 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const paginationValues = [
+	{
+		"name": "Katrine",
+		"alt": "Cat Katrine",
+		"imgName": "pets-katrine",
+	},
+	{
+		"name": "Jennifer",
+		"alt": "Dog Jennifer",
+		"imgName": "pets-jennifer"
+	},
+	{
+		"name": "Woody",
+		"alt": "Dog Woody",
+		"imgName": "pets-woody"
+	},
+	{
+		"name": "Sophia",
+		"alt": "Dog Sophia",
+		"imgName": "pets-sophia"
+	},
+	{
+		"name": "Timmy",
+		"alt": "Cat Timmy",
+		"imgName": "pets-timmy"
+	},
+	{
+		"name": "Charly",
+		"alt": "Dog Charly",
+		"imgName": "pets-charly"
+	},
+	{
+		"name": "Scarlett",
+		"alt": "Dog Scarlett",
+		"imgName": "pets-scarlet"
+	},
+	{
+		"name": "Freddie",
+		"alt": "Cat Freddie",
+		"imgName": "pets-freddie"
+	},
+	{
+		"name": "Hunter",
+		"alt": "Dog Hunter",
+		"imgName": "pets-hunter"
+	},
+
+	{
+		"name": "Skrull",
+		"alt": "Dog Skrull",
+		"imgName": "pets-skrull"
+	},
+
+	{
+		"name": "Pory",
+		"alt": "Cat Pory",
+		"imgName": "pets-pory"
+	},
+
+	{
+		"name": "Tanos",
+		"alt": "Dog Tanos",
+		"imgName": "pets-tanos"
+	},
+	{
+		"name": "Rex",
+		"alt": "Dog Rex",
+		"imgName": "pets-rex",
+	},
+	{
+		"name": "Willson",
+		"alt": "Dog Willson",
+		"imgName": "pets-willson"
+	},
+	{
+		"name": "Tor",
+		"alt": "Dog Tor",
+		"imgName": "pets-tor"
+
+	},
+	{
+		"name": "Monna",
+		"alt": "Cat Monna",
+		"imgName": "pets-monna"
+	},
+	{
+		"name": "Donatan",
+		"alt": "Dog Donatan",
+		"imgName": "pets-donatan"
+	},
+	{
+		"name": "Koddy",
+		"alt": "Dog Koddy",
+		"imgName": "pets-koddy"
+	},
+	{
+		"name": "Butty",
+		"alt": "Dog Butty",
+		"imgName": "pets-butty"
+	},
+	{
+		"name": "July",
+		"alt": "Dog July",
+		"imgName": "pets-july"
+	},
+	{
+		"name": "Perry",
+		"alt": "Dog Perry",
+		"imgName": "pets-perry"
+	},
+	{
+		"name": "Missy",
+		"alt": "Dog Missy",
+		"imgName": "pets-missy"
+	},
+	{
+		"name": "Lolly",
+		"alt": "Dog Lolly",
+		"imgName": "pets-lolly"
+	},
+	{
+		"name": "Iron",
+		"alt": "Dog Iron",
+		"imgName": "pets-iron"
+	},
+	{
+		"name": "Wonder",
+		"alt": "Dog Wonder",
+		"imgName": "pets-wonder"
+	},
+	{
+		"name": "Molly",
+		"alt": "Dog Molly",
+		"imgName": "pets-molly"
+	},
+	{
+		"name": "Elton",
+		"alt": "Dog Elton",
+		"imgName": "pets-elton"
+	},
+	{
+		"name": "Cola",
+		"alt": "Dog Cola",
+		"imgName": "pets-cola"
+	},
+	{
+		"name": "Doran",
+		"alt": "Dog Doran",
+		"imgName": "pets-doran"
+	},
+	{
+		"name": "Face",
+		"alt": "Dog Face",
+		"imgName": "pets-face"
+	},
+	{
+		"name": "Fold",
+		"alt": "Dog Fold",
+		"imgName": "pets-fold"
+	},
+	{
+		"name": "Jhon",
+		"alt": "Dog Jhon",
+		"imgName": "pets-jhon"
+	},
+	{
+		"name": "Molav",
+		"alt": "Dog Molav",
+		"imgName": "pets-molav"
+	},
+	{
+		"name": "Monika",
+		"alt": "Dog Monika",
+		"imgName": "pets-monika"
+	},
+	{
+		"name": "Nomad",
+		"alt": "Dog Nomad",
+		"imgName": "pets-nomad"
+	},
+	{
+		"name": "Rikky",
+		"alt": "Dog Rikky",
+		"imgName": "pets-rikky"
+	},
+	{
+		"name": "Rolls",
+		"alt": "Dog Rolls",
+		"imgName": "pets-rolls"
+	},
+	{
+		"name": "Ronny",
+		"alt": "Dog Ronny",
+		"imgName": "pets-ronny"
+	},
+	{
+		"name": "Smile",
+		"alt": "Dog Smile",
+		"imgName": "pets-smile"
+	},
+	{
+		"name": "Jessy",
+		"alt": "Dog Jessy",
+		"imgName": "pets-jessy"
+	},
+	{
+		"name": "Poolly",
+		"alt": "Dog Poolly",
+		"imgName": "pets-poolly"
+	},
+	{
+		"name": "Salem",
+		"alt": "Dog Salem",
+		"imgName": "pets-salem"
+	},
+	{
+		"name": "Spoon",
+		"alt": "Dog Spoon",
+		"imgName": "pets-spoon"
+	},
+	{
+		"name": "Yammy",
+		"alt": "Dog Yammy",
+		"imgName": "pets-yammy"
+	},
+	{
+		"name": "Blacky",
+		"alt": "Dog Blacky",
+		"imgName": "pets-blacky"
+	},
+	{
+		"name": "Bony",
+		"alt": "Dog Bony",
+		"imgName": "pets-bony"
+	},
+	{
+		"name": "Ember",
+		"alt": "Dog Ember",
+		"imgName": "pets-ember"
+	},
+	{
+		"name": "Huskar",
+		"alt": "Dog Huskar",
+		"imgName": "pets-huskar"
+	},
+]
+
+/* harmony default export */ __webpack_exports__["default"] = (paginationValues);
+
+/***/ })
+/******/ 	]);
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+!function() {
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _components_popup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _components_checkClickOut__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/* harmony import */ var _components_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+
+
+
+
+
+
+}();
+/******/ })()
+;

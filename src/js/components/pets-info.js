@@ -539,7 +539,7 @@ const petInfoJSON = [
 	{
 		"name": "Monika",
 		"type": "Dog",
-		"breed": "English bulldog",
+		"breed": "Pooch",
 		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
 		"age": "0 years 3 month",
 		"inoculations": [
@@ -555,7 +555,7 @@ const petInfoJSON = [
 	{
 		"name": "Nomad",
 		"type": "Dog",
-		"breed": "Pooch",
+		"breed": "English bulldog",
 		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
 		"age": "1 years 1 month",
 		"inoculations": [
