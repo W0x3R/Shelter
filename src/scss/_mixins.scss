@@ -1,0 +1,25 @@
+@mixin fluid-text($min: 13, $content-width, $max: 46) {
+	font-size: clamp(#{$min}px, #{$max / $content-width * 100}vw, #{$max}px);
+}
+
+@mixin sizes($width, $height: auto) {
+	width: $width;
+	height: $height;
+}
+
+@mixin popupCrossStyle() {
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: calc(50% - 6px);
+	@include sizes(12px, 2px);
+	content: '';
+	background-color: var(--dark__buttons);
+	border-radius: 2px;
+}
+
+@mixin position($position, $topValue, $leftValue) {
+	position: $position;
+	top: $topValue;
+	left: $leftValue;
+}

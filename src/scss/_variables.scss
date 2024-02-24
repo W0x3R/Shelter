@@ -1,0 +1,25 @@
+:root {
+	--brown-background: url(../images/noise_transparent.png),
+		linear-gradient(to right, rgb(79, 60, 49) 0%, rgb(61, 52, 46) 27%, rgb(33, 31, 32) 100%);
+	--white_255: rgb(255, 255, 255);
+	--white_250: rgb(250, 250, 250);
+	--white_246: rgb(246, 246, 246);
+	--orange: rgb(241, 205, 179);
+	--orange_hover: rgb(253, 220, 196);
+	--dark__buttons: rgb(41, 41, 41);
+	--dark__76: rgb(76, 76, 76);
+	--dark__84: rgb(84, 84, 84);
+	--dark__205: rgb(205, 205, 205);
+	--nav__active-color: rgb(241, 205, 179);
+	--nav__active-border: 3px solid var(--nav__active-color);
+
+	--buttons-borderRadius: 100px;
+	--buttons-padding: 15px 45px 15px 45px;
+
+	--content-width: 1200px;
+	--padding-contentInline: 40px;
+
+	--Georgia-regular: 'Georgia', 'sans-serif';
+
+	--transition: all 0.3s ease;
+}
