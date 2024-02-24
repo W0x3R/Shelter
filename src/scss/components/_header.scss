@@ -104,6 +104,16 @@
 	cursor: pointer;
 	transition: var(--transition);
 
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: -15px;
+		left: -15px;
+		right: -15px;
+		bottom: -15px;
+	}
+
 	@include bigMobile {
 		display: block;
 	}
