@@ -4,7 +4,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Labrador",
 		"description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
-		"age": "0 years 2 months",
+		"age": "2 months",
 		"inoculations": [
 			"none"
 		],
@@ -20,7 +20,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Shih tzu",
 		"description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
-		"age": "0 years 1 month",
+		"age": "1 month",
 		"inoculations": [
 			"parvovirus"
 		],
@@ -53,7 +53,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Jack Russell Terrier",
 		"description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
-		"age": "0 years 3 months",
+		"age": "3 months",
 		"inoculations": [
 			"parainfluenza"
 		],
@@ -69,7 +69,7 @@ const petInfoJSON = [
 		"type": "Cat",
 		"breed": "British Shorthair",
 		"description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
-		"age": "0 years 6 months",
+		"age": "6 months",
 		"inoculations": [
 			"panleukopenia"
 		],
@@ -102,7 +102,7 @@ const petInfoJSON = [
 		"type": "Cat",
 		"breed": "British Shorthair",
 		"description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
-		"age": "0 years 2 months",
+		"age": "2 months",
 		"inoculations": [
 			"rabies"
 		],
@@ -218,7 +218,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Pooch",
 		"description": "I am a handsome sweetheart who loves people and melts for chin scratches!",
-		"age": "0 years 3 month",
+		"age": "3 month",
 		"inoculations": [
 			"none"
 		],
@@ -250,7 +250,7 @@ const petInfoJSON = [
 		"type": "Cat",
 		"breed": "Pooch",
 		"description": "I am a handsome sweetheart who loves people and melts for chin scratches!",
-		"age": "0 years 6 month",
+		"age": "6 month",
 		"inoculations": [
 			"none"
 		],
@@ -282,7 +282,7 @@ const petInfoJSON = [
 		"type": "Cat",
 		"breed": "Toyger",
 		"description": "I am a handsome sweetheart who loves people and melts for chin scratches!",
-		"age": "0 years 5 month",
+		"age": "5 month",
 		"inoculations": [
 			"none"
 		],
@@ -298,7 +298,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "French Bulldog",
 		"description": "This cute gay likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. He has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
-		"age": "0 years 8 month",
+		"age": "8 month",
 		"inoculations": [
 			"none"
 		],
@@ -346,7 +346,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Labrador",
 		"description": "He’s mild mannered and really just wants to spend his time outside or laying next to you being pet. He is extremely low energy but has a lot of.",
-		"age": "0 years 7 month",
+		"age": "7 month",
 		"inoculations": [
 			"none"
 		],
@@ -541,7 +541,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Pooch",
 		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
-		"age": "0 years 3 month",
+		"age": "3 month",
 		"inoculations": [
 			"none"
 		],
@@ -605,7 +605,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "English bulldog",
 		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
-		"age": "0 years 4 month",
+		"age": "4 month",
 		"inoculations": [
 			"none"
 		],
@@ -621,7 +621,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Pooch",
 		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
-		"age": "0 years 6 month",
+		"age": "6 month",
 		"inoculations": [
 			"none"
 		],
@@ -637,7 +637,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Tibetan mastiff",
 		"description": "I am a friendly and laid back senior who enjoys chatting and being pet!",
-		"age": "0 years 4 month",
+		"age": "4 month",
 		"inoculations": [
 			"none"
 		],
@@ -653,7 +653,7 @@ const petInfoJSON = [
 		"type": "Dog",
 		"breed": "Bedlington Terrier",
 		"description": "I am loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. I am a lot to say and wants a person to share his thoughts with.",
-		"age": "0 years 9 month",
+		"age": "9 month",
 		"inoculations": [
 			"none"
 		],
