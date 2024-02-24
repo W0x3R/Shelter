@@ -680,7 +680,7 @@ const petInfoJSON = [
 	{
 		"name": "Monika",
 		"type": "Dog",
-		"breed": "Pooch",
+		"breed": "Dachshund",
 		"description": "I am here and I am looking for my forever home to live out the best years of my life. I am full of energy. Everyday I am learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
 		"age": "3 month",
 		"inoculations": [
