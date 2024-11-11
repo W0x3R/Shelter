@@ -1,3 +1,6 @@
+@use '../mixins';
+@use '../media';
+
 .body {
 	font-family: var(--Georgia-regular);
 	font-weight: 400;
@@ -19,14 +22,14 @@
 }
 
 .title {
-	@include fluid-text(25, 768, 35);
+	@include mixins.fluid-text(25, 768, 35);
 	font-weight: 400;
 	line-height: 130%;
 	letter-spacing: 2.1px;
 	text-align: left;
 	color: var(--dark__84);
 
-	@include bigMobile {
+	@include media.bigMobile {
 		letter-spacing: 1.5px;
 		text-align: center;
 	}
@@ -39,7 +42,7 @@
 	letter-spacing: 0px;
 	text-align: left;
 
-	@include bigMobile {
+	@include media.bigMobile {
 		text-align: justify;
 	}
 }
@@ -61,7 +64,7 @@
 }
 
 .popup {
-	@include position(fixed, 50%, 50%);
+	@include mixins.position(fixed, 50%, 50%);
 	display: none;
 	z-index: 3;
 	width: 900px;
@@ -70,11 +73,11 @@
 	transform: translate(-50%, -50%);
 	box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 
-	@include desktop {
+	@include media.desktop {
 		width: 630px;
 	}
 
-	@include bigMobile {
+	@include media.bigMobile {
 		box-sizing: content-box;
 		padding: 10px;
 		width: 240px;
@@ -84,7 +87,7 @@
 		display: flex;
 		justify-content: flex-start;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			justify-content: center;
 		}
 	}
@@ -92,19 +95,19 @@
 	&__picture {
 		margin-right: 30px;
 
-		@include desktop {
+		@include media.desktop {
 			margin-right: 11px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			display: none;
 		}
 
 		&-image {
-			@include sizes(500px, 500px);
+			@include mixins.sizes(500px, 500px);
 
-			@include desktop {
-				@include sizes(350px, 350px);
+			@include media.desktop {
+				@include mixins.sizes(350px, 350px);
 			}
 		}
 	}
@@ -113,15 +116,16 @@
 		padding-top: 52px;
 		padding-right: 23px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-top: 10px;
 			padding-right: 9px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-top: 0;
 			padding-right: 0;
 			justify-content: center;
+
 			& h4,
 			h5 {
 				text-align: center;
@@ -133,7 +137,7 @@
 		margin-bottom: 16px;
 		font-size: 35px;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 17px;
 		}
 	}
@@ -142,7 +146,7 @@
 		margin-bottom: 40px;
 		font-size: 20px;
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 20px;
 		}
 	}
@@ -151,12 +155,12 @@
 		margin-bottom: 40px;
 		font-size: 15px;
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 20px;
 			font-size: 13px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			text-align: justify;
 		}
 	}
@@ -172,20 +176,20 @@
 		&:not(:last-of-type) {
 			margin-bottom: 11px;
 
-			@include desktop {
+			@include media.desktop {
 				margin-bottom: 6px;
 			}
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			font-size: 14px;
 		}
 
 		&:before {
-			@include position(absolute, 7px, 0);
+			@include mixins.position(absolute, 7px, 0);
 			display: block;
 			content: '';
-			@include sizes(4px, 4px);
+			@include mixins.sizes(4px, 4px);
 			border-radius: 50%;
 			background: var(--nav__active-color);
 		}
@@ -201,7 +205,7 @@
 		right: -42px;
 		z-index: 0;
 		padding: 0;
-		@include sizes(52px, 52px);
+		@include mixins.sizes(52px, 52px);
 		border: 2px solid var(--nav__active-color);
 		border-radius: 26px;
 		color: var(--dark__buttons);
@@ -211,25 +215,25 @@
 		transition: var(--transition);
 
 		&::before {
-			@include popupCrossStyle;
+			@include mixins.popupCrossStyle;
 			transform: rotate(45deg);
 		}
 
 		&:after {
-			@include popupCrossStyle;
+			@include mixins.popupCrossStyle;
 			transform: rotate(-45deg);
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			top: -54px;
 			right: -30px;
 		}
 
-		@include hover {
+		@include media.hover {
 			background: var(--orange_hover);
 		}
 
-		@include hover-none {
+		@include media.hover-none {
 			background: var(--orange_hover);
 		}
 

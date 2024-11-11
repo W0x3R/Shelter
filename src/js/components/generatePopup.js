@@ -1,13 +1,22 @@
-const generatePopUp = (name, type, breed, description, age, inoculations, diseases, parasites) => {
+const generatePopUp = (
+	name,
+	type,
+	breed,
+	description,
+	age,
+	inoculations,
+	diseases,
+	parasites
+) => {
 	return `
 		<picture class="popup__picture">
 		<source
-			srcset="./images/${name}.webp"
+			srcset="./assets/images/popup/${name}.webp"
 			type="image/webp">
 		<source
-			srcset="./images/${name}.avif"
+			srcset="./assets/images/popup/${name}.avif"
 			type="image/avif">
-		<img class="popup__picture-image" src="./images/${name}.png", alt="${name}">
+		<img class="popup__picture-image" src="./assets/images/popup/${name}.png", alt="${name}">
 		</picture>
 		<div class="popup__content">
 			<h4 class="popup__title popUp__text">${name}</h4>

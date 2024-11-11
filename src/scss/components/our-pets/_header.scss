@@ -1,14 +1,17 @@
+@use '../../mixins';
+@use '../../media';
+
 .header {
 	background: var(--white_255);
 
 	.container {
 		padding-block: 30px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-inline: 30px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-inline: 20px;
 		}
 	}
@@ -36,13 +39,14 @@
 		letter-spacing: 1.5px;
 	}
 }
+
 .nav {
 	color: var(--dark__84);
 
 	&__list {
 		display: flex;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			position: fixed;
 			right: 0;
 			top: 0;
@@ -50,7 +54,7 @@
 			justify-content: center;
 			align-items: center;
 			padding-block: 248px;
-			@include sizes(320px, 100vh);
+			@include mixins.sizes(320px, 100vh);
 			background: var(--white_255);
 			z-index: 1;
 			transform: translateX(200%);
@@ -68,7 +72,7 @@
 		cursor: pointer;
 		transition: var(--transition);
 
-		@include hover {
+		@include media.hover {
 			color: var(--dark__buttons);
 		}
 
@@ -84,7 +88,7 @@
 			margin-right: 35px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			font-size: 32px;
 
 			&:not(:last-of-type) {
@@ -99,7 +103,7 @@
 	display: none;
 	position: relative;
 	z-index: 2;
-	@include sizes(30px, 22px);
+	@include mixins.sizes(30px, 22px);
 	cursor: pointer;
 	transition: var(--transition);
 
@@ -113,7 +117,7 @@
 		bottom: -15px;
 	}
 
-	@include bigMobile {
+	@include media.bigMobile {
 		display: block;
 	}
 

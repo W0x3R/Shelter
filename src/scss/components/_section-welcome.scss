@@ -1,3 +1,6 @@
+@use '../mixins';
+@use '../media';
+
 .welcome {
 	margin-top: -1px;
 	background: var(--brown-background);
@@ -5,12 +8,12 @@
 	.container {
 		padding-top: 90px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-inline: 100px;
 			padding-top: 60px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-inline: 10px;
 		}
 	}
@@ -18,7 +21,7 @@
 	&__inner {
 		display: flex;
 
-		@include desktop {
+		@include media.desktop {
 			flex-direction: column;
 		}
 	}
@@ -27,7 +30,7 @@
 		margin-right: 42px;
 		padding-top: 164px;
 
-		@include desktop {
+		@include media.desktop {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -40,17 +43,17 @@
 
 	&__info-title {
 		margin-bottom: 42px;
-		@include fluid-text(25, 768, 44);
+		@include mixins.fluid-text(25, 768, 44);
 		color: var(--white_255);
 		line-height: 130%;
 		letter-spacing: 0;
 		font-weight: 400;
 
-		@include desktop {
+		@include media.desktop {
 			align-self: baseline;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			letter-spacing: 1.4px;
 			text-align: center;
 			align-self: center;
@@ -61,7 +64,7 @@
 		margin-bottom: 42px;
 		color: var(--dark__205);
 
-		@include bigMobile {
+		@include media.bigMobile {
 			text-align: center;
 		}
 	}
@@ -77,29 +80,29 @@
 		letter-spacing: 1px;
 		transition: var(--transition);
 
-		@include hover {
+		@include media.hover {
 			background-color: var(--orange_hover);
 		}
 
-		@include hover-none {
+		@include media.hover-none {
 			background-color: var(--orange_hover);
 		}
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 100px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 105px;
 		}
 	}
 
 	&__picture {
-		@include desktop {
+		@include media.desktop {
 			padding-left: 70px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-left: 40px;
 		}
 

@@ -1,5 +1,7 @@
+@use 'sass:math';
+
 @mixin fluid-text($min: 13, $content-width, $max: 46) {
-	font-size: clamp(#{$min}px, #{$max / $content-width * 100}vw, #{$max}px);
+	font-size: clamp(#{$min}px, math.div($max, $content-width) * 100vw, #{$max}px);
 }
 
 @mixin sizes($width, $height: auto) {

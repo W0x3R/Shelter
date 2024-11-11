@@ -1,14 +1,17 @@
+@use '../mixins';
+@use '../media';
+
 .help {
 	background: var(--white_255);
 
 	.container {
 		padding-block: 80px 100px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-inline: 40px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-block: 42px;
 			padding-inline: 15px;
 		}
@@ -20,7 +23,7 @@
 		align-items: center;
 		padding-inline: 87px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-inline: 0;
 		}
 	}
@@ -29,7 +32,7 @@
 		margin-bottom: 58px;
 		text-align: center;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 37px;
 		}
 	}
@@ -41,11 +44,11 @@
 		align-self: stretch;
 		gap: 53px 121px;
 
-		@include desktop {
+		@include media.desktop {
 			gap: 57px 0;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			gap: 24px 0;
 			justify-content: flex-start;
 		}
@@ -57,26 +60,26 @@
 		align-items: center;
 		justify-content: center;
 
-		@include desktop {
+		@include media.desktop {
 			width: 33.3%;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			width: 50%;
 		}
 	}
 
 	&__icons-svg {
-		@include sizes(60px, 60px);
+		@include mixins.sizes(60px, 60px);
 		margin-bottom: 30px;
 
-		@include bigMobile {
-			@include sizes(50px, 50px);
+		@include media.bigMobile {
+			@include mixins.sizes(50px, 50px);
 			margin-bottom: 20px;
 		}
 	}
 
 	&__icons-text {
-		@include fluid-text(15, 767, 20);
+		@include mixins.fluid-text(15, 767, 20);
 	}
 }

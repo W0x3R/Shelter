@@ -1,3 +1,7 @@
+@use '../../mixins';
+@use '../../media';
+
+
 .pets {
 	background: var(--white_246);
 
@@ -5,11 +9,11 @@
 		padding-block: 75px 100px;
 		padding-top: 80px;
 
-		@include desktop {
+		@include media.desktop {
 			padding: 80px 30px 85px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding: 40px 10px 42px;
 		}
 	}
@@ -24,11 +28,11 @@
 		margin-bottom: 58px;
 		text-align: center;
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 30px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 42px;
 			max-width: 300px;
 		}
@@ -44,14 +48,14 @@
 		margin-bottom: 56px;
 		max-width: 1200px;
 
-		@include desktop {
+		@include media.desktop {
 			gap: 27px 40px;
 			max-width: 708px;
 			justify-content: center;
 			margin-bottom: 36px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			flex-direction: column;
 			margin-bottom: 42px;
 		}
@@ -66,7 +70,7 @@
 		cursor: pointer;
 		transition: var(--transition);
 
-		@include hover {
+		@include media.hover {
 			background: var(--white_255);
 
 			& figcaption button {
@@ -80,7 +84,7 @@
 	}
 
 	&__images-image {
-		@include sizes(270px, 270px);
+		@include mixins.sizes(270px, 270px);
 		margin-bottom: 27px;
 	}
 
@@ -102,18 +106,19 @@
 		cursor: pointer;
 		transition: var(--transition);
 	}
+
 	&__buttons {
 		display: flex;
 		justify-content: center;
 		gap: 0 20px;
 		width: 100%;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			gap: 0 10px;
 		}
 
 		&-item {
-			@include sizes(52px, 52px);
+			@include mixins.sizes(52px, 52px);
 			border: 2px solid var(--dark__205);
 			border-radius: var(--buttons-borderRadius);
 			color: var(--dark__205);
@@ -133,11 +138,11 @@
 				cursor: pointer;
 				transition: var(--transition);
 
-				@include hover {
+				@include media.hover {
 					background: var(--orange_hover);
 				}
 
-				@include hover-none {
+				@include media.hover-none {
 					background: var(--orange_hover);
 				}
 			}

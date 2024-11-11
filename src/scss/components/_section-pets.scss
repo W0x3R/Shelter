@@ -1,14 +1,17 @@
+@use '../mixins';
+@use '../media';
+
 .pets {
 	background: var(--white_246);
 
 	.container {
 		padding-block: 75px 100px;
 
-		@include desktop {
+		@include media.desktop {
 			padding: 80px 30px 100px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding: 36px 10px 42px;
 		}
 	}
@@ -16,7 +19,7 @@
 	&__arrow {
 		position: absolute;
 		padding: 0;
-		@include sizes(52px, 52px);
+		@include mixins.sizes(52px, 52px);
 		border: 2px solid var(--nav__active-color);
 		border-radius: var(--buttons-borderRadius);
 		background: transparent;
@@ -27,11 +30,11 @@
 			left: 0;
 			top: 49%;
 
-			@include desktop {
+			@include media.desktop {
 				left: 0;
 			}
 
-			@include bigMobile {
+			@include media.bigMobile {
 				left: 19%;
 				top: 79%;
 			}
@@ -41,32 +44,32 @@
 			right: 0;
 			top: 49%;
 
-			@include desktop {
+			@include media.desktop {
 				right: 0;
 			}
 
-			@include bigMobile {
+			@include media.bigMobile {
 				right: 19%;
 				top: 79%;
 			}
 		}
 
-		@include hover {
+		@include media.hover {
 			background: var(--orange_hover);
 		}
 
-		@include hover-none {
+		@include media.hover-none {
 			background: var(--orange_hover);
 		}
 
 		&_moveLeftAnimation {
 			animation: moveLeftAnimation1280 0.5s ease forwards;
 
-			@include desktop {
+			@include media.desktop {
 				animation: moveLeftAnimation768 0.5s ease forwards;
 			}
 
-			@include bigMobile {
+			@include media.bigMobile {
 				animation: moveLeftAnimation320 0.5s ease forwards;
 			}
 		}
@@ -74,11 +77,11 @@
 		&_moveRightAnimation {
 			animation: moveRightAnimation1280 0.5s ease forwards;
 
-			@include desktop {
+			@include media.desktop {
 				animation: moveRightAnimation768 0.5s ease forwards;
 			}
 
-			@include bigMobile {
+			@include media.bigMobile {
 				animation: moveRightAnimation320 0.5s ease forwards;
 			}
 		}
@@ -105,11 +108,11 @@
 		text-align: center;
 		letter-spacing: 6%;
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 54px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 42px;
 			max-width: 300px;
 		}
@@ -125,12 +128,12 @@
 		max-width: 990px;
 		overflow: hidden;
 
-		@include desktop {
+		@include media.desktop {
 			gap: 0 40px;
 			max-width: 580px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			position: relative;
 			margin-bottom: 116px;
 			max-width: 270px;
@@ -146,7 +149,7 @@
 		cursor: pointer;
 		transition: var(--transition);
 
-		@include hover {
+		@include media.hover {
 			background: var(--white_255);
 
 			& figcaption button {
@@ -160,7 +163,7 @@
 	}
 
 	&__images-image {
-		@include sizes(270px, 270px);
+		@include mixins.sizes(270px, 270px);
 		margin-bottom: 23px;
 	}
 
@@ -193,11 +196,11 @@
 		letter-spacing: 1px;
 		transition: var(--transition);
 
-		@include hover {
+		@include media.hover {
 			background: var(--orange_hover);
 		}
 
-		@include hover-none {
+		@include media.hover-none {
 			background: var(--orange_hover);
 		}
 	}
@@ -207,6 +210,7 @@
 	from {
 		transform: translateX(0);
 	}
+
 	to {
 		transform: translateX(-1080px);
 	}
@@ -216,6 +220,7 @@
 	from {
 		transform: translateX(0);
 	}
+
 	to {
 		transform: translateX(-620px);
 	}
@@ -225,6 +230,7 @@
 	from {
 		transform: translateX(0);
 	}
+
 	to {
 		transform: translateX(-310px);
 	}
@@ -234,6 +240,7 @@
 	from {
 		transform: translateX(-1080px);
 	}
+
 	to {
 		transform: translateX(0);
 	}
@@ -243,6 +250,7 @@
 	from {
 		transform: translateX(-620px);
 	}
+
 	to {
 		transform: translateX(0);
 	}
@@ -252,6 +260,7 @@
 	from {
 		transform: translateX(-310px);
 	}
+
 	to {
 		transform: translateX(0);
 	}
