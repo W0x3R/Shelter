@@ -12,7 +12,7 @@
 		}
 
 		@include media.bigMobile {
-			padding-block: 42px;
+			padding-block: 40px;
 			padding-inline: 15px;
 		}
 	}
@@ -45,11 +45,11 @@
 		gap: 53px 121px;
 
 		@include media.desktop {
-			gap: 57px 0;
+			gap: 55px 0;
 		}
 
 		@include media.bigMobile {
-			gap: 24px 0;
+			gap: 24px 29px;
 			justify-content: flex-start;
 		}
 	}
@@ -65,7 +65,7 @@
 		}
 
 		@include media.bigMobile {
-			width: 50%;
+			width: 45%;
 		}
 	}
 
