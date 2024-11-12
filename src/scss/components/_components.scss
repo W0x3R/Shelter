@@ -51,8 +51,15 @@
 	color: var(--dark__84);
 	font-size: 20px;
 	line-height: 23px;
-	letter-spacing: 6%;
 	text-align: center;
+
+	@include media.desktop {
+		letter-spacing: 1.2px;
+	}
+
+	@include media.bigMobile {
+		letter-spacing: 1px;
+	}
 }
 
 .popUp__text {
