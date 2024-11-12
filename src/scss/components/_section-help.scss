@@ -41,7 +41,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		align-self: stretch;
 		gap: 53px 121px;
 
 		@include media.desktop {
@@ -49,7 +48,7 @@
 		}
 
 		@include media.bigMobile {
-			gap: 24px 29px;
+			gap: 24.6px 29px;
 			justify-content: flex-start;
 		}
 	}

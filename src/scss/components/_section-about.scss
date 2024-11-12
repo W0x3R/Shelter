@@ -53,8 +53,12 @@
 	}
 
 	&__info-title {
-		margin-bottom: 23px;
+		margin-bottom: 25px;
 		text-wrap: balance;
+
+		@include media.bigMobile {
+			margin-bottom: 23px;
+		}
 	}
 
 	&__info-subtitle {
@@ -71,7 +75,7 @@
 		}
 
 		@include media.bigMobile {
-			max-width: 266px;
+			max-width: 270px;
 
 			&:not(:last-of-type) {
 				margin-bottom: 22px;
