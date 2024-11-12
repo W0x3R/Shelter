@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use './media';
 
 @mixin fluid-text($min: 13, $content-width, $max: 46) {
 	font-size: clamp(#{$min}px, math.div($max, $content-width) * 100vw, #{$max}px);
@@ -24,4 +25,41 @@
 	position: $position;
 	top: $topValue;
 	left: $leftValue;
+}
+
+@mixin setArrowStyles {
+	position: absolute;
+	top: 49%;
+	padding: 0;
+	width: 52px;
+	height: 52px;
+	border: 2px solid var(--nav__active-color);
+	border-radius: var(--buttons-borderRadius);
+	background: transparent;
+	cursor: pointer;
+	transition: var(--transition);
+
+	@include media.hoverAndActive {
+		background: var(--orange_hover);
+	}
+}
+
+@mixin setArrowPosition($type) {
+	@if $type ==left {
+		left: 0;
+
+		@include media.bigMobile {
+			left: 19%;
+			top: 79%;
+		}
+	}
+
+	@else if $type ==right {
+		right: 0;
+
+		@include media.bigMobile {
+			right: 19%;
+			top: 79%;
+		}
+	}
 }
