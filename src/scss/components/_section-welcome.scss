@@ -80,11 +80,7 @@
 		letter-spacing: 1px;
 		transition: var(--transition);
 
-		@include media.hover {
-			background-color: var(--orange_hover);
-		}
-
-		@include media.hover-none {
+		@include media.hoverAndActive {
 			background-color: var(--orange_hover);
 		}
 
