@@ -1,5 +1,6 @@
 @use '../mixins';
 @use '../media';
+@use '../slider-animations';
 
 .pets {
 	background: var(--white_246);
@@ -8,90 +9,39 @@
 		padding-block: 75px 100px;
 
 		@include media.desktop {
-			padding: 80px 30px 100px;
+			padding-inline: 30px;
 		}
 
 		@include media.bigMobile {
-			padding: 36px 10px 42px;
+			padding: 40px 10px 42px;
 		}
 	}
 
 	&__arrow {
-		position: absolute;
-		padding: 0;
-		@include mixins.sizes(52px, 52px);
-		border: 2px solid var(--nav__active-color);
-		border-radius: var(--buttons-borderRadius);
-		background: transparent;
-		cursor: pointer;
-		transition: var(--transition);
+		@include mixins.setArrowStyles;
+
 
 		&:first-of-type {
-			left: 0;
-			top: 49%;
-
-			@include media.desktop {
-				left: 0;
-			}
-
-			@include media.bigMobile {
-				left: 19%;
-				top: 79%;
-			}
+			@include mixins.setArrowPosition('left')
 		}
 
 		&:last-of-type {
-			right: 0;
-			top: 49%;
-
-			@include media.desktop {
-				right: 0;
-			}
-
-			@include media.bigMobile {
-				right: 19%;
-				top: 79%;
-			}
-		}
-
-		@include media.hover {
-			background: var(--orange_hover);
-		}
-
-		@include media.hover-none {
-			background: var(--orange_hover);
+			@include mixins.setArrowPosition('right')
 		}
 
 		&_moveLeftAnimation {
-			animation: moveLeftAnimation1280 0.5s ease forwards;
-
-			@include media.desktop {
-				animation: moveLeftAnimation768 0.5s ease forwards;
-			}
-
-			@include media.bigMobile {
-				animation: moveLeftAnimation320 0.5s ease forwards;
-			}
+			@include slider-animations.setSliderAnimation('left');
 		}
 
 		&_moveRightAnimation {
-			animation: moveRightAnimation1280 0.5s ease forwards;
-
-			@include media.desktop {
-				animation: moveRightAnimation768 0.5s ease forwards;
-			}
-
-			@include media.bigMobile {
-				animation: moveRightAnimation320 0.5s ease forwards;
-			}
+			@include slider-animations.setSliderAnimation('right');
 		}
 
 		&-svg {
-			width: 14px;
-			height: 6px;
 			position: absolute;
 			top: calc(50% - 3px);
 			left: calc(50% - 7px);
+			@include mixins.sizes(14px, 6px);
 		}
 	}
 
@@ -106,14 +56,9 @@
 		margin-bottom: 60px;
 		max-width: 400px;
 		text-align: center;
-		letter-spacing: 6%;
-
-		@include media.desktop {
-			margin-bottom: 54px;
-		}
 
 		@include media.bigMobile {
-			margin-bottom: 42px;
+			margin-bottom: 41px;
 			max-width: 300px;
 		}
 	}
@@ -152,19 +97,15 @@
 		@include media.hover {
 			background: var(--white_255);
 
-			& figcaption button {
+			& .pets__images-button {
 				background: var(--orange_hover);
 			}
-		}
-
-		&:hover figcaption button {
-			background: var(--orange_hover);
 		}
 	}
 
 	&__images-image {
 		@include mixins.sizes(270px, 270px);
-		margin-bottom: 23px;
+		margin-bottom: 26px;
 	}
 
 	&__images-text {
@@ -173,7 +114,7 @@
 	}
 
 	&__images-button {
-		margin-bottom: 30px;
+		margin-bottom: 28px;
 		padding: var(--buttons-padding);
 		color: var(--dark__buttons);
 		border: 2px solid rgb(241, 205, 179);
@@ -196,72 +137,8 @@
 		letter-spacing: 1px;
 		transition: var(--transition);
 
-		@include media.hover {
+		@include media.hoverAndActive {
 			background: var(--orange_hover);
 		}
-
-		@include media.hover-none {
-			background: var(--orange_hover);
-		}
-	}
-}
-
-@keyframes moveLeftAnimation1280 {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(-1080px);
-	}
-}
-
-@keyframes moveLeftAnimation768 {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(-620px);
-	}
-}
-
-@keyframes moveLeftAnimation320 {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(-310px);
-	}
-}
-
-@keyframes moveRightAnimation1280 {
-	from {
-		transform: translateX(-1080px);
-	}
-
-	to {
-		transform: translateX(0);
-	}
-}
-
-@keyframes moveRightAnimation768 {
-	from {
-		transform: translateX(-620px);
-	}
-
-	to {
-		transform: translateX(0);
-	}
-}
-
-@keyframes moveRightAnimation320 {
-	from {
-		transform: translateX(-310px);
-	}
-
-	to {
-		transform: translateX(0);
 	}
 }
