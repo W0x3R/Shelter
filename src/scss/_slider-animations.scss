@@ -1,0 +1,47 @@
+@use './media';
+
+@mixin sliderAnimation($name, $from, $to) {
+	@keyframes #{$name} {
+		from {
+			transform: translateX(#{$from});
+		}
+
+		to {
+			transform: translateX(#{$to});
+		}
+	}
+}
+
+@include sliderAnimation(moveLeft, 0, -1080px);
+@include sliderAnimation(moveLeftDesktop, 0, -620px);
+@include sliderAnimation(moveLeftMobile, 0, -310px);
+@include sliderAnimation(moveRight, -1080px, 0);
+@include sliderAnimation(moveRightDesktop, -620px, 0);
+@include sliderAnimation(moveRightMobile, -310px, 0);
+
+
+@mixin setSliderAnimation($direction) {
+	@if $direction ==left {
+		animation: moveLeft 0.5s ease forwards;
+
+		@include media.desktop {
+			animation: moveLeftDesktop 0.5s ease forwards;
+		}
+
+		@include media.bigMobile {
+			animation: moveLeftMobile 0.5s ease forwards;
+		}
+	}
+
+	@else if $direction ==right {
+		animation: moveRight 0.5s ease forwards;
+
+		@include media.desktop {
+			animation: moveRightDesktop 0.5s ease forwards;
+		}
+
+		@include media.bigMobile {
+			animation: moveRightMobile 0.5s ease forwards;
+		}
+	}
+}
