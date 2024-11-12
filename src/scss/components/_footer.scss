@@ -8,18 +8,18 @@
 		padding-top: 40px;
 
 		@include media.desktop {
-			padding: 23px 30px 0;
+			padding: 26px 30px 0;
 		}
 
 		@include media.bigMobile {
-			padding: 28px 10px 0;
+			padding-inline: 10px;
 		}
 	}
 
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0 160px;
+		column-gap: 160px;
 
 		@include media.desktop {
 			justify-content: center;
@@ -37,8 +37,8 @@
 			& .footer__contacts-title {
 				margin-bottom: 40px;
 
-				@include media.bigMobile {
-					margin-bottom: 37px;
+				@include media.desktop {
+					margin-bottom: 36px;
 				}
 			}
 
@@ -55,6 +55,10 @@
 
 			& .footer__contacts-title {
 				margin-bottom: 34px;
+
+				@include media.desktop {
+					margin-bottom: 31px;
+				}
 
 				@include media.bigMobile {
 					margin-bottom: 39px;
@@ -88,11 +92,15 @@
 
 		&:first-of-type {
 			margin-bottom: 32px;
+
+			@include media.desktop {
+				margin-bottom: 36px;
+			}
 		}
 
 		@include media.bigMobile {
 			&:first-of-type {
-				margin-bottom: 35px;
+				margin-bottom: 37px;
 			}
 
 			&:last-of-type {
