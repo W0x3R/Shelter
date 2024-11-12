@@ -4,7 +4,7 @@
 	background: var(--white_255);
 
 	.container {
-		padding-block: 80px 100px;
+		padding-block: 78px 100px;
 
 		@include media.desktop {
 			padding-inline: 165px;
@@ -39,7 +39,7 @@
 	}
 
 	&__info {
-		padding-top: 14px;
+		padding-top: 12px;
 
 		@include media.desktop {
 			padding-top: 0;
@@ -53,7 +53,7 @@
 	}
 
 	&__info-title {
-		margin-bottom: 22px;
+		margin-bottom: 23px;
 		text-wrap: balance;
 	}
 
@@ -71,7 +71,11 @@
 		}
 
 		@include media.bigMobile {
-			max-width: 270px;
+			max-width: 266px;
+
+			&:not(:last-of-type) {
+				margin-bottom: 22px;
+			}
 
 			&:last-of-type {
 				margin-bottom: 42px;
