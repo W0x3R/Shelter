@@ -1,42 +1,21 @@
-@use '../../mixins';
 @use '../../media';
+@use '../header';
 
 .header {
 	background: var(--white_255);
 
 	.container {
-		padding-block: 30px;
-
-		@include media.desktop {
-			padding-inline: 30px;
-		}
-
-		@include media.bigMobile {
-			padding-inline: 20px;
-		}
-	}
-
-	&__inner {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		padding-bottom: 30px;
 	}
 }
 
 .logo {
 	&__title {
-		margin-bottom: 10px;
-		font-size: 32px;
-		line-height: 110%;
-		letter-spacing: 2px;
 		color: var(--dark__84);
 	}
 
 	&__subtitle {
 		color: var(--dark__buttons);
-		font-size: 13px;
-		line-height: 15px;
-		letter-spacing: 1.5px;
 	}
 }
 
@@ -44,103 +23,35 @@
 	color: var(--dark__84);
 
 	&__list {
-		display: flex;
-
 		@include media.bigMobile {
-			position: fixed;
-			right: 0;
-			top: 0;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding-block: 248px;
-			@include mixins.sizes(320px, 100vh);
 			background: var(--white_255);
-			z-index: 1;
-			transform: translateX(200%);
-			transition: transform 0.5s ease-in-out;
-		}
-
-		&_active {
-			transform: translateX(0);
-			box-shadow: 0 0 0 9999px rgb(0 0 0 / 60%);
 		}
 	}
 
 	&__item {
-		border-bottom: 3px solid transparent;
-		cursor: pointer;
-		transition: var(--transition);
-
 		@include media.hover {
 			color: var(--dark__buttons);
 		}
 
 		&:active {
+			color: var(--dark__buttons);
 			border-bottom: var(--nav__active-border);
+		}
+
+		&:first-of-type {
+			color: var(--dark__84);
+			border-bottom: none;
 		}
 
 		&:nth-of-type(2) {
+			color: var(--dark__buttons);
 			border-bottom: var(--nav__active-border);
-		}
-
-		&:not(:last-of-type) {
-			margin-right: 35px;
-		}
-
-		@include media.bigMobile {
-			font-size: 32px;
-
-			&:not(:last-of-type) {
-				margin-bottom: 43px;
-				margin-right: 0;
-			}
 		}
 	}
 }
 
 .burger {
-	display: none;
-	position: relative;
-	z-index: 2;
-	@include mixins.sizes(30px, 22px);
-	cursor: pointer;
-	transition: var(--transition);
-
-	&::before {
-		content: '';
-		position: absolute;
-		display: block;
-		top: -15px;
-		left: -15px;
-		right: -15px;
-		bottom: -15px;
-	}
-
-	@include media.bigMobile {
-		display: block;
-	}
-
 	&__line {
-		position: absolute;
-		display: inline-block;
-		width: 30px;
-		border-bottom: 2px solid #000;
-
-		&:nth-of-type(1) {
-			top: 0px;
-		}
-
-		&:nth-of-type(2) {
-			top: 10px;
-		}
-
-		&:nth-of-type(3) {
-			top: 20px;
-		}
-	}
-
-	&_active {
-		transform: rotate(90deg);
+		border-bottom: 2px solid rgb(0, 0, 0);
 	}
 }
