@@ -1,12 +1,13 @@
 @use '../../mixins';
 @use '../../media';
-
+@use '../../commonPetsSectionStyles.scss' as commonPetsStyles;
 
 .pets {
 	background: var(--white_246);
 
 	.container {
-		padding-block: 75px 100px;
+		padding-bottom: 100px;
+		padding-inline: 31px;
 		padding-top: 80px;
 
 		@include media.desktop {
@@ -14,7 +15,7 @@
 		}
 
 		@include media.bigMobile {
-			padding: 40px 10px 42px;
+			padding: 42px 10px;
 		}
 	}
 
@@ -45,14 +46,14 @@
 		align-self: flex-start;
 		gap: 30px 40px;
 		align-self: center;
-		margin-bottom: 56px;
+		margin-bottom: 58px;
 		max-width: 1200px;
 
 		@include media.desktop {
-			gap: 27px 40px;
+			gap: 29px 40px;
 			max-width: 708px;
 			justify-content: center;
-			margin-bottom: 36px;
+			margin-bottom: 38px;
 		}
 
 		@include media.bigMobile {
@@ -61,51 +62,7 @@
 		}
 	}
 
-	&__images-figure {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border-radius: 9px;
-		background: var(--white_250);
-		cursor: pointer;
-		transition: var(--transition);
-
-		@include media.hover {
-			background: var(--white_255);
-
-			& figcaption button {
-				background: var(--orange_hover);
-			}
-		}
-
-		&:hover figcaption button {
-			background: var(--orange_hover);
-		}
-	}
-
-	&__images-image {
-		@include mixins.sizes(270px, 270px);
-		margin-bottom: 27px;
-	}
-
-	&__images-text {
-		margin-bottom: 28px;
-		text-align: center;
-	}
-
-	&__images-button {
-		margin-bottom: 30px;
-		padding: var(--buttons-padding);
-		color: var(--dark__buttons);
-		border: 2px solid rgb(241, 205, 179);
-		border-radius: var(--buttons-borderRadius);
-		background: transparent;
-		font-size: 17px;
-		line-height: 130%;
-		letter-spacing: 1px;
-		cursor: pointer;
-		transition: var(--transition);
-	}
+	@include commonPetsStyles.commonPetsStyles;
 
 	&__buttons {
 		display: flex;
@@ -152,7 +109,7 @@
 
 .left-start {
 	&::before {
-		content: '< <';
+		content: '<<';
 	}
 }
 
@@ -170,7 +127,7 @@
 
 .right-end {
 	&::before {
-		content: '> >';
+		content: '>>';
 	}
 }
 

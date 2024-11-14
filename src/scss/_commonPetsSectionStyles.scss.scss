@@ -1,0 +1,54 @@
+@use './media';
+@use './mixins';
+
+@mixin commonPetsStyles {
+	&__images-figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 9px;
+		background: var(--white_250);
+		cursor: pointer;
+		transition: var(--transition);
+
+		@include media.hover {
+			background: var(--white_255);
+
+			& .pets__images-button {
+				background: var(--orange_hover);
+			}
+		}
+	}
+
+	&__images-image {
+		@include mixins.sizes(270px, 270px);
+		margin-bottom: 27px;
+
+		@include media.desktop {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__images-text {
+		margin-bottom: 28px;
+		text-align: center;
+
+		@include media.desktop {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__images-button {
+		margin-bottom: 31px;
+		padding: var(--buttons-padding);
+		color: var(--dark__buttons);
+		border: 2px solid rgb(241, 205, 179);
+		border-radius: var(--buttons-borderRadius);
+		background: transparent;
+		font-size: 17px;
+		line-height: 130%;
+		letter-spacing: 1px;
+		cursor: pointer;
+		transition: var(--transition);
+	}
+}
