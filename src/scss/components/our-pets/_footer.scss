@@ -1,8 +1,14 @@
 @use '../../media';
 @use '../footer';
 
-.footer-container {
-	@include media.bigMobile {
-		padding-top: 30px;
+.footer {
+	.container {
+		@include media.desktop {
+			padding-top: 25px;
+		}
+
+		@include media.bigMobile {
+			padding-top: 30px;
+		}
 	}
 }

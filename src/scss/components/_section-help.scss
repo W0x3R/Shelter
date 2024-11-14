@@ -33,7 +33,7 @@
 		text-align: center;
 
 		@include media.bigMobile {
-			margin-bottom: 37px;
+			margin-bottom: 39px;
 		}
 	}
 
@@ -41,7 +41,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 53px 121px;
+		gap: 56px 121px;
 
 		@include media.desktop {
 			gap: 55px 0;
