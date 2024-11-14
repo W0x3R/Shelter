@@ -75,15 +75,16 @@
 		transition: var(--transition);
 
 		@include media.hover {
-			color: var(--white_255);
+			color: var(--white_250);
 		}
 
 		&:active {
-			color: var(--white_255);
+			color: var(--white_250);
 			border-bottom: var(--nav__active-border);
 		}
 
 		&:first-of-type {
+			color: var(--white_250);
 			border-bottom: var(--nav__active-border);
 		}
 
