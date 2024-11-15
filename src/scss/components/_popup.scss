@@ -1,0 +1,205 @@
+@use '../media';
+@use '../mixins';
+
+.popup {
+	@include mixins.position(fixed, 50%, 50%);
+	display: none;
+	z-index: 3;
+	width: 900px;
+	background: var(--white_250);
+	border-radius: 9px;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+	@include media.desktop {
+		width: 630px;
+	}
+
+	@include media.bigMobile {
+		padding: 10px;
+		width: 240px;
+	}
+
+	&_active {
+		display: flex;
+		justify-content: flex-start;
+
+		@include media.bigMobile {
+			justify-content: center;
+		}
+	}
+
+	&__text {
+		color: rgb(0, 0, 0);
+		font-weight: 400;
+		line-height: 115%;
+		text-align: left;
+	}
+
+	&__picture {
+		margin-right: 30px;
+
+		@include media.desktop {
+			margin-right: 11px;
+		}
+
+		@include media.bigMobile {
+			display: none;
+		}
+
+		&-image {
+			@include mixins.sizes(500px, 500px);
+
+			@include media.desktop {
+				@include mixins.sizes(350px, 350px);
+			}
+		}
+	}
+
+	&__content {
+		padding-top: 52px;
+		padding-right: 20px;
+
+		@include media.desktop {
+			padding-top: 10px;
+			padding-right: 8px;
+		}
+
+		@include media.bigMobile {
+			padding-top: 0;
+			padding-right: 0;
+
+			& h4,
+			h5 {
+				text-align: center;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 8px;
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 2.1px;
+
+		@include media.bigMobile {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__breed {
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 115%;
+		letter-spacing: 1.2px;
+
+		@include media.desktop {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__description {
+		margin-bottom: 40px;
+		font-size: 15px;
+		letter-spacing: 0.90px;
+
+		@include media.desktop {
+			margin-bottom: 20px;
+			font-size: 13px;
+			letter-spacing: 0.78px;
+			line-height: 110%;
+		}
+
+		@include media.bigMobile {
+			margin-bottom: 20px;
+			text-align: justify;
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 13px;
+		font-size: 15px;
+		font-weight: 700;
+		list-style: none;
+		line-height: 110%;
+		letter-spacing: 0.9px;
+		color: rgb(0, 0, 0);
+
+		&:not(:last-of-type) {
+			margin-bottom: 11px;
+
+			@include media.desktop {
+				margin-bottom: 6px;
+			}
+
+			@include media.bigMobile {
+				margin-bottom: 7px;
+			}
+		}
+
+		@include media.bigMobile {
+			font-size: 15px;
+			padding-left: 15px;
+		}
+
+		&:before {
+			@include mixins.position(absolute, 7px, 0);
+			display: block;
+			content: '';
+			@include mixins.sizes(4px, 4px);
+			border-radius: 50%;
+			background: var(--nav__active-color);
+		}
+	}
+
+	&__span {
+		font-weight: 400;
+	}
+
+	&__button {
+		position: absolute;
+		top: -52px;
+		right: -42px;
+		z-index: 0;
+		padding: 0;
+		@include mixins.sizes(52px, 52px);
+		border: 2px solid var(--nav__active-color);
+		border-radius: 26px;
+		color: var(--dark__buttons);
+		outline: none;
+		cursor: pointer;
+		background-color: transparent;
+		transition: var(--transition);
+
+		&::before {
+			content: url('./images/svg/cross.svg');
+		}
+
+		@include media.bigMobile {
+			top: -52px;
+			right: -29px;
+		}
+
+		@include media.hoverAndActive {
+			background: var(--orange_hover);
+		}
+
+		&_hover {
+			background: var(--orange_hover);
+		}
+	}
+
+	&_shadow {
+		position: fixed;
+		display: none;
+		inset: 0;
+		background: rgba(41, 41, 41, 0.6);
+		z-index: 1;
+		min-height: 100%;
+
+		&-on {
+			display: block;
+		}
+	}
+}

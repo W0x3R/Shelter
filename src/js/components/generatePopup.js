@@ -19,9 +19,9 @@ const generatePopUp = (
 		<img class="popup__picture-image" src="./assets/images/popup/${name}.png", alt="${name}">
 		</picture>
 		<div class="popup__content">
-			<h4 class="popup__title popUp__text">${name}</h4>
-			<h5 class="popup__breed popUp__text">${type} - ${breed}</h5>
-			<p class="popup__description popUp__text">${description}</p>
+			<h4 class="popup__title popup__text">${name}</h4>
+			<h5 class="popup__breed popup__text">${type} - ${breed}</h5>
+			<p class="popup__description popup__text">${description}</p>
 			<ul class="popup__list">
 				<li class="popup__item">
 					Age:
