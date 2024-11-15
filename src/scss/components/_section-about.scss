@@ -7,11 +7,12 @@
 		padding-block: 78px 100px;
 
 		@include media.desktop {
+			padding-top: 76px;
 			padding-inline: 165px;
 		}
 
 		@include media.bigMobile {
-			padding: 40px 10px;
+			padding: 37px 10px 40px;
 		}
 	}
 

@@ -20,15 +20,6 @@
 		}
 	}
 
-	&__images-image {
-		@include mixins.sizes(270px, 270px);
-		margin-bottom: 27px;
-
-		@include media.desktop {
-			margin-bottom: 24px;
-		}
-	}
-
 	&__images-text {
 		margin-bottom: 28px;
 		text-align: center;

@@ -86,6 +86,11 @@
 		}
 	}
 
+	&__images-image {
+		@include mixins.sizes(270px, 270px);
+		margin-bottom: 24px;
+	}
+
 	@include commonPetsStyles.commonPetsStyles;
 
 	&__link {

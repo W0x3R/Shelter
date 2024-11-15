@@ -62,6 +62,15 @@
 		}
 	}
 
+	&__images-image {
+		@include mixins.sizes(270px, 270px);
+		margin-bottom: 26px;
+
+		@include media.desktop {
+			margin-bottom: 23px;
+		}
+	}
+
 	@include commonPetsStyles.commonPetsStyles;
 
 	&__buttons {
