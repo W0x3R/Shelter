@@ -1,13 +1,13 @@
-export const generatePopupPicture = (name, src = "./assets/images/popup/") => {
-	const baseSrc = `${src}${name}`
+export const generatePopupPicture = (name) => {
+	const BASE_SRC = `./assets/images/popup/${name}`
 	return `
 		<picture class="popup__picture">
 		<source
-			srcset="${baseSrc}.webp"
+			srcset="${BASE_SRC}.webp"
 			type="image/webp">
 		<source
-			srcset="${baseSrc}.avif"
+			srcset="${BASE_SRC}.avif"
 			type="image/avif">
-		<img class="popup__picture-image" src="${baseSrc}.png", alt="${name}">
+		<img class="popup__picture-image" src="${BASE_SRC}.png", alt="${name}">
 		</picture>`
 }
