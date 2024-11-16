@@ -11,4 +11,5 @@ loadItems()
 window.addEventListener("click", (e) => {
 	callClickEvents(e, clickEvents)
 	checkClickOutBurger(e)
+	checkClickOutPopUp(e)
 })
