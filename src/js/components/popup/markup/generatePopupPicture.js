@@ -1,5 +1,5 @@
-export const generatePopupPicture = (name, src = "./assets/images/popup/") => {
-	const baseSrc = `${src}${name}`
+export const generatePopupPicture = (name) => {
+	const baseSrc = `./assets/images/popup/${name}`
 	return `
 		<picture class="popup__picture">
 		<source
