@@ -1,55 +1,14 @@
-import { getNumberItemsPerPage } from "./pagination/itemsPerPage/getNumberItemsPerPage"
-import {
-	itemsPerPage,
-	setValueItemsPerPageOnPageLoad
-} from "./pagination/itemsPerPage/setValueItemsPerPageOnPageLoad"
+import { itemsPerPage } from "./pagination/itemsPerPage/setValueItemsPerPageOnPageLoad"
 import paginationValues from "./paginationValues"
+import { loadItems } from "./pagination/markup/loadItems"
 
-const petsImages = document.querySelector(".pets__images")
 const leftStart = document.querySelector(".left-start")
 const left = document.querySelector(".left")
 const right = document.querySelector(".right")
 const rightEnd = document.querySelector(".right-end")
 let currentCount = document.querySelector(".pets__buttons-item_count")
-let startPage = 1
+export let startPage = 1
 let maxPage
-
-const createFigure = (i) => {
-	const figure = document.createElement("figure")
-	figure.classList.add("pets__images-figure")
-	figure.setAttribute("data-pet", paginationValues[i].name)
-	figure.innerHTML = `<picture class="pets__images-picture">
-	<source
-		srcset="./assets/images/pets-list/${paginationValues[i]["imgName"]}@1x.webp 1x,./assets/images/pets-list/${paginationValues[i]["imgName"]}@2x.webp 2x, ./assets/images/pets-list/${paginationValues[i]["imgName"]}@3x.webp 3x"
-		type="image/webp">
-	<source
-		srcset="./assets/images/pets-list/${paginationValues[i]["imgName"]}@1x.avif 1x,./assets/images/pets-list/${paginationValues[i]["imgName"]}@2x.avif 2x, ./assets/images/pets-list/${paginationValues[i]["imgName"]}@3x.avif 3x"
-		type="image/avif">
-	<img class="pets__images-image" src="./assets/images/pets-list/${paginationValues[i]["imgName"]}@1x.png" srcset="./assets/images/pets-list/${paginationValues[i]["imgName"]}@2x.png 2x, 
-	./assets/images/pets-list/${paginationValues[i]["imgName"]}@3x.png 3x" alt="${paginationValues[i].alt}">
-</picture>
-<figcaption>
-	<p class="pets__images-text  subtitle-animal">${paginationValues[i].name}</p >
-	<button class="pets__images-button">Learn more</button>
-</figcaption > `
-	petsImages.append(figure)
-}
-
-const loadItems = () => {
-	setValueItemsPerPageOnPageLoad(getNumberItemsPerPage())
-	petsImages.innerHTML = ""
-
-	for (
-		let i = (startPage - 1) * itemsPerPage;
-		i < startPage * itemsPerPage;
-		i++
-	) {
-		if (!paginationValues[i]) break
-		createFigure(i)
-	}
-}
-
-loadItems()
 
 const setButtonsDisabled = (btnOne, btnTwo) => {
 	btnOne.classList.remove("pets__buttons-item_enabled")
