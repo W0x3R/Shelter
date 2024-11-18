@@ -9,17 +9,18 @@ import {
 	incrementCurrentPageValue,
 	setCurrentPageValue
 } from "./pagination/itemsPerPage/currentPageValue"
+import { setCurrentPageText } from "./pagination/markup/setCurrentPageText"
 
 const leftStart = document.querySelector(".left-start")
 const left = document.querySelector(".left")
 const right = document.querySelector(".right")
 const rightEnd = document.querySelector(".right-end")
-let currentCount = document.querySelector(".pets__buttons-item_count")
+
 let maxPage
 
 const clickLeftStartButton = () => {
 	setCurrentPageValue(1)
-	currentCount.textContent = getCurrentPageValue()
+	setCurrentPageText()
 
 	setButtonsDisabled(leftStart, left)
 	setButtonsEnabled(right, rightEnd)
@@ -28,7 +29,7 @@ const clickLeftStartButton = () => {
 
 const clickLeftButton = () => {
 	decrementCurrentPageValue()
-	currentCount.textContent = getCurrentPageValue()
+	setCurrentPageText()
 
 	setButtonsEnabled(right, rightEnd)
 
@@ -41,7 +42,7 @@ const clickLeftButton = () => {
 const clickRightButton = () => {
 	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
 	incrementCurrentPageValue()
-	currentCount.textContent = getCurrentPageValue()
+	setCurrentPageText()
 
 	setButtonsEnabled(leftStart, left)
 
@@ -54,7 +55,7 @@ const clickRightButton = () => {
 const clickRightEndButton = () => {
 	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
 	setCurrentPageValue(maxPage)
-	currentCount.textContent = getCurrentPageValue()
+	setCurrentPageText()
 
 	setButtonsDisabled(right, rightEnd)
 	setButtonsEnabled(leftStart, left)
