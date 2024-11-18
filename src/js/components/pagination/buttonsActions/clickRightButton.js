@@ -14,7 +14,7 @@ import { setButtonsEnabled } from "./setButtonsEnabled"
 export const clickRightButton = () => {
 	setMaxPageValue(Math.ceil(paginationValues.length / itemsPerPage))
 	incrementCurrentPageValue()
-	setCurrentPageText()
+	setCurrentPageText(getCurrentPageValue())
 
 	setButtonsEnabled(leftStart, left)
 

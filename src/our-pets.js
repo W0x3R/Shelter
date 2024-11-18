@@ -1,5 +1,4 @@
 import "./our-pets.scss"
-
 import * as pagination from "./js/components/pagination"
 import { checkClickOutBurger } from "./js/components/burger/checkClickOutBurger"
 import { callClickEvents } from "./js/components/eventHandlers/callClickEvents"

@@ -10,7 +10,7 @@ import { setButtonsEnabled } from "./setButtonsEnabled"
 
 export const clickLeftButton = () => {
 	decrementCurrentPageValue()
-	setCurrentPageText()
+	setCurrentPageText(getCurrentPageValue())
 	setButtonsEnabled(right, rightEnd)
 
 	if (getCurrentPageValue() === 1) {

@@ -1,4 +1,7 @@
-import { setCurrentPageValue } from "../itemsPerPage/currentPageValue"
+import {
+	getCurrentPageValue,
+	setCurrentPageValue
+} from "../itemsPerPage/currentPageValue"
 import { loadItems } from "../markup/loadItems"
 import { setCurrentPageText } from "../markup/setCurrentPageText"
 import { setButtonsDisabled } from "./setButtonsDisabled"
@@ -11,7 +14,7 @@ export const rightEnd = document.querySelector(".right-end")
 
 export const clickLeftStartButton = () => {
 	setCurrentPageValue(1)
-	setCurrentPageText()
+	setCurrentPageText(getCurrentPageValue())
 
 	setButtonsDisabled(leftStart, left)
 	setButtonsEnabled(right, rightEnd)
