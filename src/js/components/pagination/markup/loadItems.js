@@ -1,8 +1,8 @@
 import { getNumberItemsPerPage } from "../itemsPerPage/getNumberItemsPerPage"
 import {
-	itemsPerPage,
+	getValueItemsPerPageOnPageLoad,
 	setValueItemsPerPageOnPageLoad
-} from "../itemsPerPage/setValueItemsPerPageOnPageLoad"
+} from "../itemsPerPage/valueItemsPerPageOnPageLoad"
 import paginationValues from "../../paginationValues"
 import { slider } from "../../slider/buttons/actionsOnLeftBtnClick"
 import { createFigure } from "../../slider/markup/createFigure"
@@ -13,8 +13,8 @@ export const loadItems = () => {
 	slider.innerHTML = ""
 
 	for (
-		let i = (getCurrentPageValue() - 1) * itemsPerPage;
-		i < getCurrentPageValue() * itemsPerPage;
+		let i = (getCurrentPageValue() - 1) * getValueItemsPerPageOnPageLoad();
+		i < getCurrentPageValue() * getValueItemsPerPageOnPageLoad();
 		i++
 	) {
 		if (!paginationValues[i]) break
