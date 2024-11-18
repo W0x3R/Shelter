@@ -3,10 +3,16 @@ import { actionsOnSlideClick } from "../popup/actionsOnSlideClick"
 import { setStylesOnTogglePopup } from "../popup/setStylesOnTogglePopup"
 import { actionsOnButtonsClick } from "../slider/buttons/actionsOnButtonsClick"
 
-export const clickEvents = {
+export const clickEventsMainPage = {
 	".header": (e) => actionsBurgerClick(e),
 	".left": () => actionsOnButtonsClick("left"),
 	".right": () => actionsOnButtonsClick("right"),
+	".pets__images": (e) => actionsOnSlideClick(e),
+	".popup__button": () => setStylesOnTogglePopup("remove")
+}
+
+export const clickEventsOurPetsPage = {
+	".header": (e) => actionsBurgerClick(e),
 	".pets__images": (e) => actionsOnSlideClick(e),
 	".popup__button": () => setStylesOnTogglePopup("remove")
 }
