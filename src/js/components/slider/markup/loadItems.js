@@ -1,4 +1,4 @@
-import paginationValues from "../../paginationValues"
+import paginationValues from "../../pagination/paginationValues"
 import { createFigure } from "./createFigure"
 
 export const loadItems = () => {

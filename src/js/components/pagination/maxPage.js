@@ -1,4 +1,4 @@
-import paginationValues from "../paginationValues"
+import paginationValues from "./paginationValues"
 import { getValueItemsPerPageOnPageLoad } from "./itemsPerPage/valueItemsPerPageOnPageLoad"
 
 let maxPageNumber

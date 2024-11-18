@@ -3,7 +3,7 @@ import {
 	getValueItemsPerPageOnPageLoad,
 	setValueItemsPerPageOnPageLoad
 } from "../itemsPerPage/valueItemsPerPageOnPageLoad"
-import paginationValues from "../../paginationValues"
+import paginationValues from "../paginationValues"
 import { slider } from "../../slider/buttons/actionsOnLeftBtnClick"
 import { createFigure } from "../../slider/markup/createFigure"
 import { getCurrentPageValue } from "../itemsPerPage/currentPageValue"

@@ -1,4 +1,4 @@
-import paginationValues from "../../paginationValues"
+import paginationValues from "../../pagination/paginationValues"
 import { slider } from "../buttons/actionsOnLeftBtnClick"
 import { createSourceElement } from "./createSourceElement"
 

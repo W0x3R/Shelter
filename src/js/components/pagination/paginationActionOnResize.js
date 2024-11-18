@@ -3,16 +3,16 @@ import {
 	leftStart,
 	right,
 	rightEnd
-} from "./pagination/buttonsActions/leftBtn/clickLeftStartButton"
-import { setButtonsDisabled } from "./pagination/buttonsActions/setButtonsDisabled"
-import { setButtonsEnabled } from "./pagination/buttonsActions/setButtonsEnabled"
+} from "./buttonsActions/leftBtn/clickLeftStartButton"
+import { setButtonsDisabled } from "./buttonsActions/setButtonsDisabled"
+import { setButtonsEnabled } from "./buttonsActions/setButtonsEnabled"
 import {
 	getCurrentPageValue,
 	setCurrentPageValue
-} from "./pagination/itemsPerPage/currentPageValue"
-import { loadItems } from "./pagination/markup/loadItems"
-import { setCurrentPageText } from "./pagination/markup/setCurrentPageText"
-import { getMaxPageValue, setMaxPageValue } from "./pagination/maxPage"
+} from "./itemsPerPage/currentPageValue"
+import { loadItems } from "./markup/loadItems"
+import { setCurrentPageText } from "./markup/setCurrentPageText"
+import { getMaxPageValue, setMaxPageValue } from "./maxPage"
 
 export const paginationActionOnResize = () => {
 	setMaxPageValue()

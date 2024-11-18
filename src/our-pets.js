@@ -6,7 +6,7 @@ import { popup } from "./js/components/popup/actionsOnSlideClick"
 import { checkClickOutPopUp } from "./js/components/popup/checkClickOutPopup"
 import { clickEventsOurPetsPage } from "./js/components/eventHandlers/clickEvents"
 import { loadItems } from "./js/components/pagination/markup/loadItems"
-import { paginationActionOnResize } from "./js/components/paginationActionOnResize"
+import { paginationActionOnResize } from "./js/components/pagination/paginationActionOnResize"
 
 loadItems()
 
