@@ -1,3 +1,8 @@
+import { getNumberItemsPerPage } from "./pagination/itemsPerPage/getNumberItemsPerPage"
+import {
+	itemsPerPage,
+	setValueItemsPerPageOnPageLoad
+} from "./pagination/itemsPerPage/setValueItemsPerPageOnPageLoad"
 import paginationValues from "./paginationValues"
 
 const petsImages = document.querySelector(".pets__images")
@@ -7,18 +12,7 @@ const right = document.querySelector(".right")
 const rightEnd = document.querySelector(".right-end")
 let currentCount = document.querySelector(".pets__buttons-item_count")
 let startPage = 1
-let itemsPerPage
 let maxPage
-
-const getCountOfSlides = () => {
-	if (window.innerWidth >= 1280) {
-		return 8
-	} else if (window.innerWidth < 1280 && window.innerWidth >= 768) {
-		return 6
-	} else if (window.innerWidth < 768 && window.innerWidth >= 320) {
-		return 3
-	}
-}
 
 const createFigure = (i) => {
 	const figure = document.createElement("figure")
@@ -42,7 +36,7 @@ const createFigure = (i) => {
 }
 
 const loadItems = () => {
-	itemsPerPage = getCountOfSlides()
+	setValueItemsPerPageOnPageLoad(getNumberItemsPerPage())
 	petsImages.innerHTML = ""
 
 	for (
@@ -126,4 +120,4 @@ left.addEventListener("click", clickLeftButton)
 right.addEventListener("click", clickRightButton)
 rightEnd.addEventListener("click", clickRightEndButton)
 
-window.addEventListener("resize", loadItems)
+window.addEventListener("resize", () => loadItems)
