@@ -1,11 +1,11 @@
 import {
 	getCurrentPageValue,
 	setCurrentPageValue
-} from "../itemsPerPage/currentPageValue"
-import { loadItems } from "../markup/loadItems"
-import { setCurrentPageText } from "../markup/setCurrentPageText"
-import { setButtonsDisabled } from "./setButtonsDisabled"
-import { setButtonsEnabled } from "./setButtonsEnabled"
+} from "../../itemsPerPage/currentPageValue"
+import { loadItems } from "../../markup/loadItems"
+import { setCurrentPageText } from "../../markup/setCurrentPageText"
+import { setButtonsDisabled } from "../setButtonsDisabled"
+import { setButtonsEnabled } from "../setButtonsEnabled"
 
 export const leftStart = document.querySelector(".left-start")
 export const left = document.querySelector(".left")

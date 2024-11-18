@@ -3,7 +3,7 @@ import {
 	leftStart,
 	right,
 	rightEnd
-} from "./pagination/buttonsActions/clickLeftStartButton"
+} from "./pagination/buttonsActions/leftBtn/clickLeftStartButton"
 import { setButtonsDisabled } from "./pagination/buttonsActions/setButtonsDisabled"
 import { setButtonsEnabled } from "./pagination/buttonsActions/setButtonsEnabled"
 import {
