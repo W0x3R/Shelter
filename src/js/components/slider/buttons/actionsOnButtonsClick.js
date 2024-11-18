@@ -1,6 +1,6 @@
 import { slider } from "./actionsOnLeftBtnClick"
 import {
-	isAnimateFinished,
+	getIsAnimateValue,
 	setIsAnimateValue
 } from "../animation/isAnimateFinished"
 import { getCountOfSlides } from "../getCountOfSlides"
@@ -9,7 +9,7 @@ import { actionsOnRightBtnClick } from "./actionsOnRightBtnClick"
 
 export const actionsOnButtonsClick = (btnDirection) => {
 	let countSlides = getCountOfSlides()
-	if (isAnimateFinished) return
+	if (getIsAnimateValue()) return
 	setIsAnimateValue(true)
 	const sliderChildrenArr = Array.from(slider.children)
 
