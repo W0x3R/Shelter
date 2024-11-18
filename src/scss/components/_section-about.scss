@@ -33,10 +33,10 @@
 		@include media.desktop {
 			margin-right: 0;
 		}
+	}
 
-		&-image {
-			width: clamp(260px, 78vw, 300px);
-		}
+	&__picture-image {
+		width: clamp(260px, 78vw, 300px);
 	}
 
 	&__info {

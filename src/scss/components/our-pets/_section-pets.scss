@@ -82,35 +82,35 @@
 		@include media.bigMobile {
 			gap: 0 10px;
 		}
+	}
 
-		&-item {
-			@include mixins.sizes(52px, 52px);
-			border: 2px solid var(--dark__205);
-			border-radius: var(--buttons-borderRadius);
+	&__buttons-item {
+		@include mixins.sizes(52px, 52px);
+		border: 2px solid var(--dark__205);
+		border-radius: var(--buttons-borderRadius);
+		color: var(--dark__205);
+		font-size: 20px;
+		font-family: 'Georgia';
+
+		&_disabled {
 			color: var(--dark__205);
-			font-size: 20px;
-			font-family: 'Georgia';
+			background: transparent;
+			border: 2px solid var(--dark__205);
+		}
 
-			&_disabled {
-				color: var(--dark__205);
-				background: transparent;
-				border: 2px solid var(--dark__205);
+		&_enabled {
+			border: 2px solid var(--nav__active-color);
+			background: transparent;
+			color: var(--dark__buttons);
+			cursor: pointer;
+			transition: var(--transition);
+
+			@include media.hover {
+				background: var(--orange_hover);
 			}
 
-			&_enabled {
-				border: 2px solid var(--nav__active-color);
-				background: transparent;
-				color: var(--dark__buttons);
-				cursor: pointer;
-				transition: var(--transition);
-
-				@include media.hover {
-					background: var(--orange_hover);
-				}
-
-				@include media.hover-none {
-					background: var(--orange_hover);
-				}
+			@include media.hover-none {
+				background: var(--orange_hover);
 			}
 		}
 	}

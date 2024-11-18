@@ -37,13 +37,13 @@
 		&_moveRightAnimation {
 			@include slider-animations.setSliderAnimation('right');
 		}
+	}
 
-		&-svg {
-			position: absolute;
-			top: calc(50% - 3px);
-			left: calc(50% - 7px);
-			@include mixins.sizes(14px, 6px);
-		}
+	&__arrow-svg {
+		position: absolute;
+		top: calc(50% - 3px);
+		left: calc(50% - 7px);
+		@include mixins.sizes(14px, 6px);
 	}
 
 	&__inner {

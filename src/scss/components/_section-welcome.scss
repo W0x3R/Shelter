@@ -101,9 +101,9 @@
 		@include media.bigMobile {
 			padding-left: 40px;
 		}
+	}
 
-		&-image {
-			width: clamp(260px, 74vw, 698px);
-		}
+	&__picture-image {
+		width: clamp(260px, 74vw, 698px);
 	}
 }
