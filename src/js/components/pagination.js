@@ -10,22 +10,15 @@ import {
 	setCurrentPageValue
 } from "./pagination/itemsPerPage/currentPageValue"
 import { setCurrentPageText } from "./pagination/markup/setCurrentPageText"
-
-const leftStart = document.querySelector(".left-start")
-const left = document.querySelector(".left")
-const right = document.querySelector(".right")
-const rightEnd = document.querySelector(".right-end")
+import {
+	clickLeftStartButton,
+	left,
+	leftStart,
+	right,
+	rightEnd
+} from "./pagination/buttonsActions/clickLeftStartButton"
 
 let maxPage
-
-const clickLeftStartButton = () => {
-	setCurrentPageValue(1)
-	setCurrentPageText()
-
-	setButtonsDisabled(leftStart, left)
-	setButtonsEnabled(right, rightEnd)
-	loadItems()
-}
 
 const clickLeftButton = () => {
 	decrementCurrentPageValue()
