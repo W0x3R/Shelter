@@ -17,20 +17,9 @@ import {
 	right,
 	rightEnd
 } from "./pagination/buttonsActions/clickLeftStartButton"
+import { clickLeftButton } from "./pagination/buttonsActions/clickLeftButton"
 
 let maxPage
-
-const clickLeftButton = () => {
-	decrementCurrentPageValue()
-	setCurrentPageText()
-
-	setButtonsEnabled(right, rightEnd)
-
-	if (getCurrentPageValue() === 1) {
-		setButtonsDisabled(leftStart, left)
-	}
-	loadItems()
-}
 
 const clickRightButton = () => {
 	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
