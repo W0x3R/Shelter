@@ -15,7 +15,6 @@ export const rightEnd = document.querySelector(".right-end")
 export const clickLeftStartButton = () => {
 	setCurrentPageValue(1)
 	setCurrentPageText(getCurrentPageValue())
-
 	setButtonsDisabled(leftStart, left)
 	setButtonsEnabled(right, rightEnd)
 	loadItems()
