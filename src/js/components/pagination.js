@@ -1,6 +1,8 @@
 import { itemsPerPage } from "./pagination/itemsPerPage/setValueItemsPerPageOnPageLoad"
 import paginationValues from "./paginationValues"
 import { loadItems } from "./pagination/markup/loadItems"
+import { setButtonsDisabled } from "./pagination/buttonsActions/setButtonsDisabled"
+import { setButtonsEnabled } from "./pagination/buttonsActions/setButtonsEnabled"
 
 const leftStart = document.querySelector(".left-start")
 const left = document.querySelector(".left")
@@ -9,26 +11,6 @@ const rightEnd = document.querySelector(".right-end")
 let currentCount = document.querySelector(".pets__buttons-item_count")
 export let startPage = 1
 let maxPage
-
-const setButtonsDisabled = (btnOne, btnTwo) => {
-	btnOne.classList.remove("pets__buttons-item_enabled")
-	btnOne.classList.add("pets__buttons-item_disabled")
-	btnOne.setAttribute("disabled", true)
-
-	btnTwo.classList.remove("pets__buttons-item_enabled")
-	btnTwo.classList.add("pets__buttons-item_disabled")
-	btnTwo.setAttribute("disabled", true)
-}
-
-const setButtonsEnabled = (btnOne, btnTwo) => {
-	btnOne.removeAttribute("disabled")
-	btnOne.classList.remove("pets__buttons-item_disabled")
-	btnOne.classList.add("pets__buttons-item_enabled")
-
-	btnTwo.removeAttribute("disabled")
-	btnTwo.classList.remove("pets__buttons-item_disabled")
-	btnTwo.classList.add("pets__buttons-item_enabled")
-}
 
 const clickLeftStartButton = () => {
 	startPage = 1
