@@ -3,12 +3,7 @@ import paginationValues from "./paginationValues"
 import { loadItems } from "./pagination/markup/loadItems"
 import { setButtonsDisabled } from "./pagination/buttonsActions/setButtonsDisabled"
 import { setButtonsEnabled } from "./pagination/buttonsActions/setButtonsEnabled"
-import {
-	decrementCurrentPageValue,
-	getCurrentPageValue,
-	incrementCurrentPageValue,
-	setCurrentPageValue
-} from "./pagination/itemsPerPage/currentPageValue"
+import { setCurrentPageValue } from "./pagination/itemsPerPage/currentPageValue"
 import { setCurrentPageText } from "./pagination/markup/setCurrentPageText"
 import {
 	clickLeftStartButton,
@@ -18,25 +13,12 @@ import {
 	rightEnd
 } from "./pagination/buttonsActions/clickLeftStartButton"
 import { clickLeftButton } from "./pagination/buttonsActions/clickLeftButton"
-
-let maxPage
-
-const clickRightButton = () => {
-	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
-	incrementCurrentPageValue()
-	setCurrentPageText()
-
-	setButtonsEnabled(leftStart, left)
-
-	if (getCurrentPageValue() === maxPage) {
-		setButtonsDisabled(right, rightEnd)
-	}
-	loadItems()
-}
+import { getMaxPageValue, setMaxPageValue } from "./pagination/maxPage"
+import { clickRightButton } from "./pagination/buttonsActions/clickRightButton"
 
 const clickRightEndButton = () => {
-	maxPage = Math.ceil(paginationValues.length / itemsPerPage)
-	setCurrentPageValue(maxPage)
+	setMaxPageValue(Math.ceil(paginationValues.length / itemsPerPage))
+	setCurrentPageValue(getMaxPageValue())
 	setCurrentPageText()
 
 	setButtonsDisabled(right, rightEnd)
