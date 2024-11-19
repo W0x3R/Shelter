@@ -48,7 +48,8 @@ module.exports = {
 				{ from: "./src/site.webmanifest", to: "site.webmanifest" },
 				{ from: "./src/browserconfig.xml", to: "browserconfig.xml" },
 				{ from: "./src/images/pets-list", to: "assets/images/pets-list" },
-				{ from: "./src/images/popup", to: "assets/images/popup" }
+				{ from: "./src/images/popup", to: "assets/images/popup" },
+				{ from: "./src/images/readme-picture.jpg", to: "assets/images/" },
 			]
 		})
 	],
