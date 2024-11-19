@@ -71,6 +71,7 @@
 	&__icons-svg {
 		@include mixins.sizes(60px, 60px);
 		margin-bottom: 30px;
+		cursor: default;
 
 		@include media.bigMobile {
 			@include mixins.sizes(50px, 50px);
