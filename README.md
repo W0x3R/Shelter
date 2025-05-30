@@ -2,7 +2,7 @@
 
 **Shelter** is a landing page that helps you give a chance to a small and cute puppy or kitten with a very wide and open heart. He or she will love you more than anyone else in the world, you'll see!
 
-![readmePhoto](/assets/images/readme-picture.jpg)
+![readmePhoto](https://res.cloudinary.com/dkcilxezg/image/upload/v1748604988/readme_shelter_vyhgvd.jpg)
 
 📋 Task: [Rolling Scopes School](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/shelter/shelter.md)
 
@@ -26,67 +26,58 @@
 
 ✅ **Burger menu:**
 
-- Implementation of burger menu on both pages.
+- Implementation of burger menu on both pages when the screen width is less than 768px.
 
-- If the page width is less than 768px,the navigation bar is hidden and the burger icon appears.
+- Clicking the burger icon triggers a smooth 90° rotation and opens a adaptive menu sliding in from the right.
 
-- When you click on the burger icon, a 320px wide adaptive menu smoothly appears on the right, the burger icon smoothly rotates 90 degrees.
+- All links inside the menu use smooth scrolling to navigate to corresponding anchor sections.
 
-- The links in the adaptive menu work by providing smooth scrolling through the anchors.
+- Clicking on any menu link (interactive or not), the burger icon, or anywhere outside the menu smoothly hides the menu by sliding it off the screen to the right and rotating the burger icon back by 90°.
 
-- When clicking on a link in the adaptive menu the adaptive menu is smooth, also hiding the menu happens if you make a click outside this window.
+- The area outside the menu darkens, and page scrolling is disabled while the menu is open.
 
-- When you tap again on the burger-icon or on the space free from the burger-menu, the adaptive menu smoothly hides moving away behind the right side of the screen, the burger icon smoothly rotates back by 90 degrees.
-
-- When clicking on any link (interactive or non-interactive) in the menu, the adaptive menu smoothly hides to the right, the burger icon rotates back 90 degrees.
-
-- The area free of burger menus is getting dark.
-
-- The page under the burger menu does not scroll.
+- The menu and its animations provide a seamless and accessible user experience.
 
 ✅ **Slider carousel:**
 
-- Clicking on the arrows moves to a new block of elements.
+- Clicking the arrows navigates to a new set of cards with a smooth carousel animation.
 
-- The blocks are changed with a carousel animation.
+- The slider is infinite — you can scroll left or right endlessly, and it will always show the next set of cards
 
-- The slider is infinite, meaning you can click left or right infinitely many times, and each time will scroll that way with a new set of cards.
+- The number of cards scrolled matches the number visible at the current screen width (3 at 1280px, 2 at 768px, 1 at 320px).
 
-- Switching left or right scrolls exactly as many cards as are shown at the current screen width (3 for 1280px, 2 for 768px, 1 for 320px).
-
-- When you change the screen width (from 1280px to 320px and back), the slider rebuilds and works without reloading the page.
+- The slider adapts dynamically when the screen is resized — it rebuilds itself and continues working without requiring a page reload.
 
 ✅ **Pagination:**
 
-- When reloading the page, the first page of pagination
-  is always opened.
+- When the page reloads, pagination always opens on the first page.
 
-- Pressing the > or < buttons opens the next or previous pagination page, respectively.
+- Clicking the < or > buttons navigates to the previous or next page.
 
-- Pressing the >> or << buttons will open the last or first page of pagination, respectively.
+- Clicking the << or >> buttons jumps to the first or last page.
 
-- When opening the first page, the << and < buttons are inactive.
+- On the first page, the << and < buttons are disabled.
 
-- When opening the last page, the > and >> buttons are inactive.
+- On the last page, the > and >> buttons are disabled.
 
-- The current page number is shown in the center of the circle. When you switch pages, the number changes to the current page number.
+- The current page number is displayed in the center of a circle and updates dynamically when navigating.
 
-- When changing the screen width (from 1280px to 320px and back), the pagination is rebuilt and works without reloading the page.
+- When resizing the screen (from 1280px to 320px and back), the pagination adjusts and continues working without page reload.
 
 ✅ **Popup:**
 
-- Implemented popup on both pages.
+- Popups are implemented on both pages.
 
-- The part of the page outside the popup is blacked out.
+- The area outside the popup is darkened.
 
-- When you open a popup, the vertical scroll of the page becomes inactive, when you close it, it becomes active again.
+- When a popup is open, page scrolling is disabled; scrolling is restored when the popup is closed.
 
-- When clicking on the area around the popup or on the button with a cross, the popup closes, but nothing happens when clicking on the popup itself.
+- Clicking outside the popup or on the close (×) button closes the popup. Clicking inside the popup does nothing.
 
 ✅ **Adaptive:**
 
-- The application elements optimally occupy the page space.
-- The app displays correctly on both computer and mobile devices.
+- The layout adapts optimally to different screen sizes.
+- The application displays correctly on both desktop and mobile devices.
 
 ## Run the project locally:
 
