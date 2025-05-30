@@ -105,5 +105,6 @@
 
 	&__picture-image {
 		width: clamp(260px, 74vw, 698px);
+		height: auto;
 	}
 }

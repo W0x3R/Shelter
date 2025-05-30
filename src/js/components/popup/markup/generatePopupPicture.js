@@ -8,6 +8,6 @@ export const generatePopupPicture = (name) => {
 		<source
 			srcset="${BASE_SRC}.avif"
 			type="image/avif">
-		<img class="popup__picture-image" src="${BASE_SRC}.png", alt="${name}">
+		<img class="popup__picture-image" src="${BASE_SRC}.png" alt="${name}" width="500px" height="500px">
 		</picture>`
 }

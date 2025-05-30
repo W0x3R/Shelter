@@ -124,6 +124,7 @@
 
 		@include media.bigMobile {
 			width: clamp(260px, 66vw, 505px);
+			height: auto;
 		}
 	}
 }

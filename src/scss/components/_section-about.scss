@@ -37,6 +37,7 @@
 
 	&__picture-image {
 		width: clamp(260px, 78vw, 300px);
+		height: auto;
 	}
 
 	&__info {

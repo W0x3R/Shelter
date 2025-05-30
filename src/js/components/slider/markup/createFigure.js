@@ -10,7 +10,7 @@ export const createFigure = (i) => {
 		${createSourceElement(BASE_SRC, "webp")}
 		${createSourceElement(BASE_SRC, "avif")}
 		<img class="pets__images-image" src="${BASE_SRC}@1x.png" srcset="${BASE_SRC}@2x.png 2x,
-		${BASE_SRC}@3x.png 3x" alt="${alt}">
+		${BASE_SRC}@3x.png 3x" alt="${alt}" width="270px" height="270px" loading="lazy" ">
 	</picture>
 	<figcaption>
 		<p class="pets__images-text  subtitle-animal">${petName}</p >

@@ -173,6 +173,9 @@
 
 		&::before {
 			content: url('./images/svg/cross.svg');
+			display: inline-block;
+			width: 12px;
+			height: 12px;
 		}
 
 		@include media.bigMobile {
