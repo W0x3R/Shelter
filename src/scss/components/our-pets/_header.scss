@@ -1,4 +1,5 @@
 @use '../../media';
+@use '../../mixins';
 @use '../header';
 
 .header {
@@ -52,6 +53,7 @@
 
 .burger {
 	&__line {
-		border-bottom: 2px solid rgb(0, 0, 0);
+		@include mixins.sizes(30px, 2px);
+		background-color: black;
 	}
 }

@@ -60,8 +60,8 @@
 			@include mixins.sizes(320px, 100dvh);
 			background: var(--dark__buttons);
 			z-index: 1;
-			transform: translateX(200%);
-			transition: transform 0.5s ease-in-out;
+			transform: translateX(100%);
+			transition: all .3s ease-in-out;
 		}
 
 		&_active {
@@ -98,10 +98,13 @@
 
 .burger {
 	display: none;
-	flex-direction: column;
-	row-gap: 8.5px;
 	position: relative;
 	z-index: 2;
+	flex-direction: column;
+	row-gap: 8.5px;
+	padding: 0;
+	border: none;
+	background-color: unset;
 	@include mixins.sizes(30px, 22px);
 	cursor: pointer;
 	transition: var(--transition);
@@ -121,7 +124,8 @@
 	}
 
 	&__line {
-		border-bottom: 2px solid var(--nav__active-color);
+		@include mixins.sizes(30px, 2px);
+		background-color: var(--nav__active-color);
 	}
 
 	&_active {
